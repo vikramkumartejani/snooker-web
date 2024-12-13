@@ -38,7 +38,7 @@ export default function Navbar() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center space-x-4">
+          <div className="md:flex hidden items-center space-x-4">
             <button className="flex items-center text-gray-700 hover:text-[#4DC488]">
               <FaShoppingCart className="h-5 w-5" />
               <span className="ml-2">Cart</span>

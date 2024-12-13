@@ -35,45 +35,55 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="mb-16">
-        <span className="text-[#4DC488] text-sm font-medium">WHY US?</span>
-        <div className="mt-4 flex flex-col md:flex-row gap-8 items-start">
-          <div className="md:w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900">Why Choose Us?</h2>
-            <p className="mt-4 text-gray-600 text-lg">
+    <section className="px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="flex flex-col-reverse md:flex-row gap-[16px] lg:gap-[63px] items-center lg:mb-[16px] mb-[32px]">
+          <div className="md:w-1/2 flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center">
+            <span
+              className="inline-block px-[8px] py-[2px] bg-[#DCFCE7] text-[#63D398] rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
+              style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
+            >
+              WHY US?
+            </span>
+            <h2 className="text-[20px] md:text-[40px] lg:text-[48px] font-bold text-[#2E2E2E] md:leading-[60px] md:mb-[26px] mb-[10px]">
+              Why Choose Us?
+            </h2>
+            <p className="text-[#637381] text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
               With our integrated CRM, project management, collaboration and
               invoicing capabilities, you can manage your business in one secure
               platform.
             </p>
           </div>
-          <div className="md:w-1/2 relative h-[300px]">
+          <div className="md:w-1/2 w-full relative md:h-[400px] h-[300px]">
             <Image
-              src="/snooker-facility.png"
+              src="/assets/why-choose-us.png"
               alt="3D Snooker Facility Illustration"
               fill
               className="object-contain"
             />
           </div>
         </div>
-      </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature) => (
-          <div key={feature.number} className="flex flex-col">
-            <div className="flex-shrink-0 mb-4">
-              <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#4DC488] text-white text-xl font-semibold">
-                {feature.number}
-              </span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature) => (
+            <div
+              key={feature.number}
+              className="flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center"
+            >
+              <div className="flex-shrink-0 mb-4">
+                <span className="flex items-center justify-center md:w-[48px] w-[38px] md:h-[48px] h-[38px] rounded-full bg-[#63D398] text-white text-[15.83px] md:text-[20px] md:leading-[30px] font-poppins font-[600]">
+                  {feature.number}
+                </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
