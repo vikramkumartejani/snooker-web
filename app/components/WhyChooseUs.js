@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
+    <section className="px-4 sm:px-6 lg:px-8 mb-[60px] md:mb-[110px]">
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col-reverse md:flex-row gap-[16px] lg:gap-[63px] items-center lg:mb-[16px] mb-[32px]">
           <div className="md:w-1/2 flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center">

@@ -3,7 +3,7 @@ import { FaApple } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen pt-16 bg--white">
+    <div className="relative min-h-screen pt-16 bg--white mb-[60px] md:mb-[110px]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-[50px] pb-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center ">
           <div className="relative z-[3] pb-[37px] lg:pb-[60px] lg:pt-[20px] flex flex-col lg:items-start items-center justify-center lg:justify-start lg:text-left text-center">
