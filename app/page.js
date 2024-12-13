@@ -4,6 +4,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Footer from "./components/Footer";
 import StoreAutomation from "./components/StoreAutomation";
 import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <StoreAutomation />
-      <Footer />
+      <Pricing />
     </main>
   );
 }
