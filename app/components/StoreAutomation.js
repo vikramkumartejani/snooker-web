@@ -5,25 +5,25 @@ export default function StoreAutomation() {
     {
       id: 1,
       name: "Device Name",
-      image: "/devices/phones.jpg",
+      image: "/assets/store-img-1.png",
       controller: "8 port Controller",
     },
     {
       id: 2,
       name: "Device Name",
-      image: "/devices/tablet.jpg",
+      image: "/assets/store-img-2.png",
       controller: "8 port Controller",
     },
     {
       id: 3,
       name: "Device Name",
-      image: "/devices/desktop.jpg",
+      image: "/assets/store-img-3.png",
       controller: "8 port Controller",
     },
     {
       id: 4,
       name: "Device Name",
-      image: "/devices/laptop.jpg",
+      image: "/assets/store-img-4.png",
       controller: "8 port Controller",
     },
   ];
@@ -35,7 +35,7 @@ export default function StoreAutomation() {
         <h2 className="text-4xl font-bold mt-2 text-gray-900">
           Store Automation
         </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-grayish max-w-2xl mx-auto">
           There are many variations of passages of Lorem Ipsum available but the
           majority have suffered alteration in some form.
         </p>
@@ -52,7 +52,7 @@ export default function StoreAutomation() {
                 src={device.image}
                 alt={device.name}
                 fill
-                className="object-cover"
+                className="object-cover h-full w-full"
               />
             </div>
             <div className="p-4">

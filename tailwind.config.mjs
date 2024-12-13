@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        blackish: "#2E2E2E",
+        greenish: "#63D398",
+        grayish: "#637381",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

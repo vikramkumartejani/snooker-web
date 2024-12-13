@@ -40,15 +40,15 @@ export default function WhyChooseUs() {
         <div className="flex flex-col-reverse md:flex-row gap-[16px] lg:gap-[63px] items-center lg:mb-[16px] mb-[32px]">
           <div className="md:w-1/2 flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center">
             <span
-              className="inline-block px-[8px] py-[2px] bg-[#DCFCE7] text-[#63D398] rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
+              className="inline-block px-[8px] py-[2px] bg-[#DCFCE7] text-greenish rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
               style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
             >
               WHY US?
             </span>
-            <h2 className="text-[20px] md:text-[40px] lg:text-[48px] font-bold text-[#2E2E2E] md:leading-[60px] md:mb-[26px] mb-[10px]">
+            <h2 className="text-[20px] md:text-[40px] lg:text-[48px] font-bold text-blackish md:leading-[60px] md:mb-[26px] mb-[10px]">
               Why Choose Us?
             </h2>
-            <p className="text-[#637381] text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
+            <p className="text-grayish text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
               With our integrated CRM, project management, collaboration and
               invoicing capabilities, you can manage your business in one secure
               platform.
@@ -64,22 +64,24 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-[24px]">
           {features.map((feature) => (
             <div
               key={feature.number}
               className="flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center"
             >
-              <div className="flex-shrink-0 mb-4">
-                <span className="flex items-center justify-center md:w-[48px] w-[38px] md:h-[48px] h-[38px] rounded-full bg-[#63D398] text-white text-[15.83px] md:text-[20px] md:leading-[30px] font-poppins font-[600]">
+              <div className="flex-shrink-0 mb-[16px]">
+                <span className="flex items-center justify-center md:w-[48px] w-[38px] md:h-[48px] h-[38px] rounded-full bg-greenish text-white text-[15.83px] md:text-[20px] md:leading-[30px] font-poppins font-[600]">
                   {feature.number}
                 </span>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="md:text-[20px] md:leading-[30px] font-[600] md:font-bold text-blackish mb-[12px]">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-grayish text-[14px] md:text-[16px] font-[400]">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}

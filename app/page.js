@@ -8,7 +8,7 @@ import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
-    <main className="space-y-[53px] md:space-y-[110px]">
+    <main className="space-y-[60px] md:space-y-[110px]">
       <Navbar />
       <Hero />
       <WhyChooseUs />
