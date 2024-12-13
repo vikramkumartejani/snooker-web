@@ -6,6 +6,7 @@ import StoreAutomation from "./components/StoreAutomation";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import DownloadSection from "./components/DownloadSection";
+import Features from "./components/Features";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <WhyChooseUs />
+      <Features />
       <Testimonials />
       <StoreAutomation />
       <Pricing />

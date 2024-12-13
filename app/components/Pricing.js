@@ -60,7 +60,10 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative">
+    <section
+      id="pricing"
+      className="pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative"
+    >
       <img
         src="/assets/pricing-15-ball-object.png"
         alt="snooker ball 15"
