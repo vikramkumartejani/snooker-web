@@ -6,14 +6,14 @@ export default function Hero() {
     <div className="relative min-h-screen pt-16 bg--white">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-[50px] pb-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center ">
-          <div className="relative z-[3] pb-[60px] pt-[20px] flex flex-col lg:items-start items-center justify-center lg:justify-start lg:text-left text-center">
+          <div className="relative z-[3] pb-[37px] lg:pb-[60px] lg:pt-[20px] flex flex-col lg:items-start items-center justify-center lg:justify-start lg:text-left text-center">
             <span
               className="inline-block px-[8px] py-[2px] bg-[#63D398] text-white rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
               style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
             >
               SNOOKER CLUBS
             </span>
-            <h1 className="text-[24px] sm:text-[42px] md:text-[48px] lg:text-[50px] xl:text-[62px] leading-[45px] lg:leading-[60px] xl:leading-[72px] md:leading-[58px] font-bold text-[#2E2E2E] mb-[15.64px] md:mb-[18px] tracking-[-2%]">
+            <h1 className="text-[24px] sm:text-[42px] md:text-[48px] lg:text-[50px] xl:text-[62px] leading-[30px] md:leading-[45px] lg:leading-[60px] xl:leading-[72px] md:leading-[58px] font-bold text-[#2E2E2E] mb-[15.64px] md:mb-[18px] tracking-[-2%]">
               Lorem ipsum lorem dolor sit amet.
             </h1>
             <p className="text-[#637381] text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
@@ -48,7 +48,7 @@ export default function Hero() {
             <img
               src="/assets/hero-img2.svg"
               alt="Snooker Table Illustration"
-              className="lg:hidden flex object-contain lg:h-[600px] sm:h-[500px]"
+              className="lg:hidden flex object-contain lg:h-[600px] sm:h-[500px] mb-[-30px]"
             />
           </div>
         </div>
