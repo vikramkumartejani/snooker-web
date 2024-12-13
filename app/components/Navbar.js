@@ -29,7 +29,7 @@ export default function Navbar() {
                 alt="logo"
                 width={172}
                 height={52}
-                className="xl:w-[172px] lg:w-[168px] w-[100px] lg:h-[52px] md:h-[45px] h-[35px] object-contain"
+                className="xl:w-[172px] lg:w-[168px] w-[120px] lg:h-[52px] md:h-[45px] h-[35px] object-contain"
               />
             </Link>
 
@@ -38,7 +38,13 @@ export default function Navbar() {
               className="lg:hidden text-gray-700 text-2xl"
               onClick={toggleDrawer}
             >
-              <IoMenu />
+              <Image
+                src="/assets/menu-icon.png"
+                alt="menu-icon"
+                width={24}
+                height={24}
+                className="md:w-[24px] w-[22px]"
+              />
             </button>
 
             {/* Navigation Links */}
