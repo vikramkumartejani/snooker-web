@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div
       id="home"
-      className="relative min-h-screen pt-16 bg--white mb-[60px] md:mb-[110px]"
+      className="relative min-h-screen pt-16 bg--white mb-[60px] md:mb-[110px] bg-white dark:bg-black"
     >
       <div className="ps-4 sm:ps-6 pe-4 sm:pe-6 lg:pe-0 lg:ps-8 xl:pe-8">
         <div className="max-w-[1280px] mx-auto pt-[50px] pb-8 relative">
@@ -17,10 +17,10 @@ export default function Hero() {
               >
                 SNOOKER CLUBS
               </span>
-              <h1 className="text-[24px] sm:text-[42px] md:text-[48px] lg:text-[50px] xl:text-[62px] leading-[30px] md:leading-[45px] lg:leading-[60px] xl:leading-[72px] md:leading-[58px] font-bold text-blackish mb-[15.64px] md:mb-[18px] tracking-[-2%]">
+              <h1 className="text-[24px] sm:text-[42px] md:text-[48px] lg:text-[50px] xl:text-[62px] leading-[30px] md:leading-[45px] lg:leading-[60px] xl:leading-[72px] md:leading-[58px] font-bold text-blackish dark:text-white/90 mb-[15.64px] md:mb-[18px] tracking-[-2%]">
                 Lorem ipsum lorem dolor sit amet.
               </h1>
-              <p className="text-grayish text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
+              <p className="text-grayish dark:text-white/80 text-[14px] md:text-[18px] lg:text-[20px] font-[500] mb-[17px] md:mb-[30px] lg:mb-[49px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent quis viverra ante, quis condimentum ipsum. Phasellus
                 bLorem ipsum dolor sit amet, consectetur adipiscing elit.

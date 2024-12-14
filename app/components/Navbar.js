@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["#home", "#why-choose-us", "#features", "#pricing"];
-      let active = "#home"; // Default to the first section
+      let active = "#home"; 
 
       for (const id of sections) {
         const section = document.querySelector(id);
@@ -38,7 +39,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 bg-white z-50"
+      className="fixed top-0 left-0 right-0 bg-white dark:bg-black z-50 dark:border-b border-white/20"
       style={{
         boxShadow: "0px 12px 25px -6px #0000000F",
       }}
@@ -46,7 +47,6 @@ export default function Navbar() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex justify-between items-center lg:h-[70px] h-[60px]">
-            {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
                 src="/assets/logo.png"
@@ -57,7 +57,6 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* Menu Button for small screens */}
             <button
               className="lg:hidden text-gray-700 text-2xl"
               onClick={toggleDrawer}
@@ -78,7 +77,7 @@ export default function Navbar() {
                 className={`relative font-poppins font-[500] ${
                   activeSection === "#home"
                     ? "text-greenish"
-                    : "text-[#2E2E2EB2]"
+                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                 } hover:text-greenish`}
               >
                 Home
@@ -93,7 +92,7 @@ export default function Navbar() {
                 className={`relative font-poppins font-[500] ${
                   activeSection === "#why-choose-us"
                     ? "text-greenish"
-                    : "text-[#2E2E2EB2]"
+                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                 } hover:text-greenish`}
               >
                 Why Choose Us
@@ -108,7 +107,7 @@ export default function Navbar() {
                 className={`relative font-poppins font-[500] ${
                   activeSection === "#features"
                     ? "text-greenish"
-                    : "text-[#2E2E2EB2]"
+                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                 } hover:text-greenish`}
               >
                 Features
@@ -123,7 +122,7 @@ export default function Navbar() {
                 className={`relative font-poppins font-[500] ${
                   activeSection === "#pricing"
                     ? "text-greenish"
-                    : "text-[#2E2E2EB2]"
+                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                 } hover:text-greenish`}
               >
                 Pricing
@@ -139,7 +138,7 @@ export default function Navbar() {
             <div className="lg:flex hidden items-center gap-[12px]">
               <Link
                 href="/checkout"
-                className="flex items-center text-[#2E2E2EB2] font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] rounded-[12px] py-[8px] px-[16px]"
+                className="flex items-center text-[#2E2E2EB2] dark:text-white font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] dark:border-white rounded-[12px] py-[8px] px-[16px]"
               >
                 <IoCartOutline className="h-[24px] w-[24px]" />
                 <span className="ml-[6px]">Cart</span>
@@ -151,6 +150,7 @@ export default function Navbar() {
               <button className="bg-greenish text-white px-[22px] py-[10px] rounded-[12px] font-[500] font-poppins text-[14px] hover:bg-[#3da36e] transition">
                 Sign In
               </button>
+              <ThemeToggle/>
             </div>
           </div>
         </div>
