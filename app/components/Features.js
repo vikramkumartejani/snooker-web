@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   FiSettings,
   FiFileText,
@@ -11,68 +12,142 @@ import {
 
 const features = [
   {
-    icon: FiSettings,
+    icon: "/assets/feature1.png",
     title: "Light Control System",
     description: "Ensures fraud-free games with top-notch security.",
   },
   {
-    icon: FiFileText,
+    icon: "/assets/feature2.png",
     title: "Billing Management",
     description: "Streamlines and automates your billing processes.",
   },
   {
-    icon: FiTriangle,
+    icon: "/assets/feature3.png",
     title: "Game Management",
     description: "Simplifies managing and organising your games.",
   },
   {
-    icon: FiPieChart,
+    icon: "/assets/feature4.png",
     title: "Business Analytics",
     description: "Provides insights to help grow your business.",
   },
   {
-    icon: FiUsers,
+    icon: "/assets/feature5.png",
     title: "Customer Management",
     description: "Keeps track of customer interactions and details.",
   },
   {
-    icon: FiCreditCard,
+    icon: "/assets/feature6.png",
     title: "Credit Management",
     description: "Handles credit efficiently and securely.",
+  },
+  {
+    icon: "/assets/feature7.png",
+    title: "Expense Management",
+    description: "Monitors and controls business expenses easily.",
+  },
+  {
+    icon: "/assets/feature8.png",
+    title: "Food Management",
+    description: "Manages food services and inventory effortlessly.",
+  },
+  {
+    icon: "/assets/feature9.png",
+    title: "Staff Management",
+    description: "Organizes staff schedules and records smoothly.",
+  },
+  {
+    icon: "/assets/feature10.png",
+    title: "Membership Management",
+    description: "Manages memberships and member information efficiently.",
+  },
+  {
+    icon: "/assets/feature11.png",
+    title: "Booking Management",
+    description: "Handles mobile bookings with ease.",
+  },
+  {
+    icon: "/assets/feature12.png",
+    title: "Reports",
+    description:
+      "Generates clear and detailed reports for better decision-making.",
   },
 ];
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-green-50/50 to-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-green-500 font-medium mb-4">FEATURES</p>
-          <h2 className="text-4xl font-bold mb-4">
-            Gain more insight into how people use your
-          </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            With our integrated CRM, project management, collaboration and
-            invoicing capabilities, you can manage every aspect of your business
-            in one secure platform.
-          </p>
-        </div>
+    <section>
+      <img src="/assets/top-wave.png" alt="top wave" />
+      <div className="relative">
+        <Image
+          src="/assets/features-cube.png"
+          alt="cube"
+          width={130.38}
+          height={116.06}
+          className="md:w-[130.38] w-[10vw] absolute right-4 -top-10 z-[2]"
+        />
+        <Image
+          src="/assets/features-cube.png"
+          alt="cube"
+          width={130.38}
+          height={116.06}
+          className="md:w-[130.38] w-[10vw] absolute left-4 -bottom-20 z-[2]"
+        />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-green-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+        <div
+          id="features"
+          className="py-[21px] md:py-[60px] lg:py-[84px] px-4"
+          style={{
+            background:
+              "radial-gradient(50% 50% at 50% 50%, rgba(240, 255, 247, 0) 0%, #F0FFF7 100%)",
+          }}
+        >
+          <div className="max-w-[1280px] mx-auto">
+            <div className="text-center mb-[58px]">
+              <span
+                className="inline-block px-[8px] py-[2px] bg-[#DCFCE7] text-greenish rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
+                style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
+              >
+                FEATURES
+              </span>
+              <h2 className="text-blackish text-[20px] md:text-[30px] lg:text-[36px] lg:leading-[44px] font-bold mb-[16px] tracking-[-2%]">
+                Gain more insight into how people use your
+              </h2>
+              <p className="text-grayish text-[14px] md:text-[16px] max-w-[919px] mx-auto">
+                With our integrated CRM, project management, collaboration and
+                invoicing capabilities, you can manage every aspect of your
+                business in one secure platform.
+              </p>
             </div>
-          ))}
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:gap-[46px] md:gap-8 gap-[24px] pb-[60px]">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-[20px] px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
+                >
+                  <div className="min-w-[38px] min-h-[38px]">
+                    <Image
+                      src={feature.icon}
+                      alt="feature icon"
+                      width={38}
+                      height={38}
+                      className="w-[38px] h-[38px]"
+                    />
+                  </div>
+                  <h3 className="text-[16px] md:text-[22px] font-[600] md:leading-[32px] text-blackish">
+                    {feature.title}
+                  </h3>
+                  <p className="text-grayish text-[14px] md:text-[16px] font-[400] leading-[25px]">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
+      <img src="/assets/bottom-wave.png" alt="top wave" />
     </section>
   );
 }

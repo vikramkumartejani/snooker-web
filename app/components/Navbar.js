@@ -4,13 +4,37 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
   const closeDrawer = () => setIsDrawerOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["#home", "#why-choose-us", "#features", "#pricing"];
+      let active = "#home"; // Default to the first section
+
+      for (const id of sections) {
+        const section = document.querySelector(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom > 100) {
+            active = id;
+            break;
+          }
+        }
+      }
+
+      setActiveSection(active);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
@@ -51,27 +75,63 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center xl:gap-[48px] gap-[35px]">
               <a
                 href="/#home"
-                className="text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+                className={`relative font-poppins font-[500] ${
+                  activeSection === "#home"
+                    ? "text-greenish"
+                    : "text-[#2E2E2EB2]"
+                } hover:text-greenish`}
               >
                 Home
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                    activeSection === "#home" ? "" : "hidden"
+                  }`}
+                ></div>
               </a>
               <a
                 href="/#why-choose-us"
-                className="text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+                className={`relative font-poppins font-[500] ${
+                  activeSection === "#why-choose-us"
+                    ? "text-greenish"
+                    : "text-[#2E2E2EB2]"
+                } hover:text-greenish`}
               >
                 Why Choose Us
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                    activeSection === "#why-choose-us" ? "" : "hidden"
+                  }`}
+                ></div>
               </a>
               <a
                 href="/#features"
-                className="text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+                className={`relative font-poppins font-[500] ${
+                  activeSection === "#features"
+                    ? "text-greenish"
+                    : "text-[#2E2E2EB2]"
+                } hover:text-greenish`}
               >
                 Features
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                    activeSection === "#features" ? "" : "hidden"
+                  }`}
+                ></div>
               </a>
               <a
                 href="/#pricing"
-                className="text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+                className={`relative font-poppins font-[500] ${
+                  activeSection === "#pricing"
+                    ? "text-greenish"
+                    : "text-[#2E2E2EB2]"
+                } hover:text-greenish`}
               >
                 Pricing
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                    activeSection === "#pricing" ? "" : "hidden"
+                  }`}
+                ></div>
               </a>
             </div>
 
@@ -88,7 +148,7 @@ export default function Navbar() {
                 <IoLogoWhatsapp className="h-[24px] w-[24px]" />
                 <span className="ml-[6px]">Contact Us</span>
               </button>
-              <button className="bg-greenish text-white px-[22px] py-[10px] rounded-[12px] font-[500] font-poppings text-[14px] hover:bg-[#3da36e] transition">
+              <button className="bg-greenish text-white px-[22px] py-[10px] rounded-[12px] font-[500] font-poppins text-[14px] hover:bg-[#3da36e] transition">
                 Sign In
               </button>
             </div>
@@ -118,31 +178,65 @@ export default function Navbar() {
           <div className="flex flex-col items-center p-4 space-y-4">
             <a
               href="/#home"
-              className="text-center block text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+              className={`relative font-poppins font-[500] ${
+                activeSection === "#home" ? "text-greenish" : "text-[#2E2E2EB2]"
+              } hover:text-greenish`}
               onClick={closeDrawer}
             >
               Home
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                  activeSection === "#home" ? "" : "hidden"
+                }`}
+              ></div>
             </a>
             <a
               href="/#why-choose-us"
-              className="text-center block text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+              className={`relative font-poppins font-[500] ${
+                activeSection === "#why-choose-us"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2]"
+              } hover:text-greenish`}
               onClick={closeDrawer}
             >
               Why Choose Us
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                  activeSection === "#why-choose-us" ? "" : "hidden"
+                }`}
+              ></div>
             </a>
             <a
               href="/#features"
-              className="text-center block text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+              className={`relative font-poppins font-[500] ${
+                activeSection === "#features"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2]"
+              } hover:text-greenish`}
               onClick={closeDrawer}
             >
               Features
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                  activeSection === "#features" ? "" : "hidden"
+                }`}
+              ></div>
             </a>
             <a
               href="/#pricing"
-              className="text-center block text-[#2E2E2EB2] font-poppins font-[500] hover:text-greenish"
+              className={`relative font-poppins font-[500] ${
+                activeSection === "#pricing"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2]"
+              } hover:text-greenish`}
               onClick={closeDrawer}
             >
               Pricing
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${
+                  activeSection === "#pricing" ? "" : "hidden"
+                }`}
+              ></div>
             </a>
             <Link
               href="/checkout"

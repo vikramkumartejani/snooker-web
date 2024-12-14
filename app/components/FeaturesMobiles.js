@@ -8,8 +8,15 @@ export default function FeaturesMobiles() {
   ];
 
   return (
-    <section id="features" className="px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-[1280px] mx-auto">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 relative">
+      <Image
+        src="/assets/feature-mobile-cube.png"
+        alt="cube"
+        width={91.45}
+        height={91.31}
+        className="md:w-[91.45px] w-[10vw] absolute right-4 md:top-0 top-[7vw] z-[2]"
+      />
+      <div className="max-w-[1280px] mx-auto relative z-[1]">
         <div className="bg-[#4DC488] rounded-[24px] overflow-hidden relative">
           <div className="grid md:grid-cols-2 xl:gap-[55px] md:gap-4 items-end">
             {/* Content */}
