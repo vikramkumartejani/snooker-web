@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -56,7 +55,7 @@ export default function StoreAutomation() {
       style={{ boxShadow: "2px 8px 24px 0px #0000000F" }}
     >
       <div className="relative h-[173px] w-full">
-        <Image
+        <img
           src={device.image}
           alt={device.name}
           className="object-cover h-full w-full"
