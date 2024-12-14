@@ -21,6 +21,7 @@ export default function Home() {
       <StoreAutomation />
       <Pricing />
       <DownloadSection />
+      <Footer />
     </main>
   );
 }
