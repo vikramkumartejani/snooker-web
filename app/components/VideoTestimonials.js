@@ -130,7 +130,7 @@ function VideoPlayer({ src }) {
 
   return (
     <div
-      className="relative rounded-[16px] overflow-hidden bg-[#f5f5f5] border-[0.7px] border-greenish group"
+      className="relative rounded-[16px] overflow-hidden bg-[#EEEEEE] border-[0.7px] border-greenish group"
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >

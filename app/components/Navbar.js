@@ -1,7 +1,7 @@
 "use client";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
-import { IoClose, IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -77,10 +77,13 @@ export default function Navbar() {
 
             {/* Action Buttons */}
             <div className="lg:flex hidden items-center gap-[12px]">
-              <button className="flex items-center text-[#2E2E2EB2] font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] rounded-[12px] py-[8px] px-[16px]">
+              <Link
+                href="/checkout"
+                className="flex items-center text-[#2E2E2EB2] font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] rounded-[12px] py-[8px] px-[16px]"
+              >
                 <IoCartOutline className="h-[24px] w-[24px]" />
                 <span className="ml-[6px]">Cart</span>
-              </button>
+              </Link>
               <button className="flex items-center text-greenish font-poppins font-[500] hover:bg-greenish/20 border border-greenish rounded-[12px] py-[8px] px-[16px] transition">
                 <IoLogoWhatsapp className="h-[24px] w-[24px]" />
                 <span className="ml-[6px]">Contact Us</span>
@@ -141,12 +144,13 @@ export default function Navbar() {
             >
               Pricing
             </a>
-            <button
+            <Link
+              href="/checkout"
               className="text-center w-full text-[#2E2E2EB2] font-poppins font-[500] hover:bg-grayish/10 py-2 px-4 border border-[#2E2E2EB2] rounded-md"
               onClick={closeDrawer}
             >
               Cart
-            </button>
+            </Link>
             <button
               className="text-center w-full text-greenish font-poppins font-[500] hover:bg-greenish/20 py-2 px-4 border border-greenish rounded-md"
               onClick={closeDrawer}
