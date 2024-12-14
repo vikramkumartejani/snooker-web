@@ -57,18 +57,21 @@ export default function Navbar() {
               />
             </Link>
 
+            <div className="flex items-center gap-6">
+            <ThemeToggle/>
             <button
               className="lg:hidden text-gray-700 text-2xl"
               onClick={toggleDrawer}
-            >
+              >
               <Image
                 src="/assets/menu-icon.png"
                 alt="menu-icon"
                 width={24}
                 height={24}
                 className="md:w-[24px] w-[22px]"
-              />
+                />
             </button>
+                </div>
 
             {/* Navigation Links */}
             <div className="hidden lg:flex items-center xl:gap-[48px] gap-[35px]">
