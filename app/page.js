@@ -7,6 +7,7 @@ import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import DownloadSection from "./components/DownloadSection";
 import Features from "./components/Features";
+import VideoTestimonials from "./components/VideoTestimonials";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <WhyChooseUs />
       <Features />
+      <VideoTestimonials />
       <Testimonials />
       <StoreAutomation />
       <Pricing />
