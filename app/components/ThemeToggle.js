@@ -21,12 +21,12 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2.5 bg-greenish dark:bg-white rounded-xl flex items-center justify-center"
+      className="p-2 sm:p-2.5 bg-greenish dark:bg-white rounded-xl flex items-center justify-center"
     >
       {theme === 'light' ? (
-        <FaMoon className="text-white w-5 h-5" />
+        <FaMoon className="text-white w-4 h-4 sm:w-5 sm:h-5" />
       ) : (
-        <FaSun className="text-black w-5 h-5" />
+        <FaSun className="text-black sm:w-5 sm:h-5 w-4 h-4" />
       )}
     </button>
   );
