@@ -59,7 +59,6 @@ export default function StoreAutomation() {
         <Image
           src={device.image}
           alt={device.name}
-          fill
           className="object-cover h-full w-full"
         />
       </div>
