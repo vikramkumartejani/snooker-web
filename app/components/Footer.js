@@ -54,7 +54,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="absolute right-0 h-full xl:px-[35px] md:px-[20px] px-[25px] bg-white text-greenish rounded-[16px] text-[14px] md:text-[16px] font-[600] hover:bg-opacity-90 transition-colors"
+                  className="absolute right-0 h-full xl:px-[35px] lg:px-[20px] md:px-[30px] px-[25px] bg-white text-greenish rounded-[16px] text-[14px] md:text-[16px] font-[600] hover:bg-opacity-90 transition-colors"
                 >
                   Subscribe
                 </button>
