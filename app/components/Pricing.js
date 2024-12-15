@@ -101,36 +101,35 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              data-aos="fade-up"
-              className="md:w-auto w-[200px] md:min-w-auto min-w-[200px] bg-white rounded-[16px] md:rounded-[20px] px-[17px] md:px-[24px] md:pb-[47px] pb-[29px] pt-[12px] md:pt-[19px] transition-all duration-300 group hover:border-greenish border border-transparent"
+              className="md:w-auto w-[400px] md:min-w-auto min-w-[280px] bg-white rounded-[16px] md:rounded-[20px] px-[17px] md:px-[24px] md:pb-[30px] pb-[29px] pt-[16px] md:pt-[19px] transition-all duration-300 group hover:border-greenish border border-transparent"
               style={{
                 boxShadow: "3.85px 5.78px 38.5px 0px #0000000D",
               }}
             >
-              <h3 className="text-[15.28px] md:text-[22px] font-[500] text-center text-blackish mb-[11px]">
+              <h3 className="text-[22px] font-[500] text-center text-blackish mb-[11px]">
                 {plan.name}
               </h3>
-              <div className="mb-[50px] md:mb-[70px] flex items-center md:gap-[10px] gap-[7px] relative">
+              <div className="mb-[40px] md:mb-[70px] flex items-center md:gap-[10px] gap-[7px] relative">
                 <div className="flex items-start">
-                  <span className="text-[10.99px] sm:text-[14px] md:text-[15.82px] text-[#2E2E2EE5] font-[500] mt-1">
+                  <span className=" text-[15.82px] text-[#2E2E2EE5] font-[500] mt-2">
                     $
                   </span>
-                  <span className="text-[29.17px] md:text-[30px] lg:text-[42px] text-blackish font-bold md:leading-[42.2px]">
+                  <span className="text-[35px] lg:text-[42px] text-blackish font-bold md:leading-[42.2px]">
                     {plan.price}
                   </span>
                 </div>
                 <div className="">
-                  <p className="text-blackish text-[9.72px] md:text-[14px] font-[500]">
+                  <p className="text-blackish text-[14px] font-[500]">
                     Per month
                   </p>
-                  <p className="text-grayish text-[7.94px] md:text-[11px] font-[400]">
+                  <p className="text-grayish text-[11px] font-[400]">
                     10% off for yearly subscription
                   </p>
                 </div>
                 <img
                   src="/assets/pricing-line-bottom.svg"
                   alt="curve"
-                  className="absolute bottom-[-15px] w-[43px] md:w-auto left-0"
+                  className="absolute bottom-[-1px] w-[43px] md:w-auto left-2"
                 />
               </div>
               <div className="space-y-[11px] md:space-y-[16px] mb-[16px] md:mb-[18px]">
@@ -146,11 +145,11 @@ export default function Pricing() {
                       height={7.82}
                       className="md:w-[16px] w-[11px]"
                     />
-                    <span>{feature}</span>
+                    <span className="text-sm md:text-base">{feature}</span>
                   </div>
                 ))}
               </div>
-              <button className="w-full py-[8px] md:py-[12px] px-6 rounded-[10.22px] md:rounded-[16px] border border-greenish text-[12px] md:text-[16px] font-[600] transition-all duration-300 group-hover:bg-greenish group-hover:text-white text-greenish">
+              <button className="w-full text-base py-[8px] md:py-[12px] px-6 rounded-[10.22px] md:rounded-[16px] border border-greenish text-[12px] md:text-[16px] font-[600] transition-all duration-300 group-hover:bg-greenish group-hover:text-white text-greenish">
                 Purchase Now
               </button>
             </div>
