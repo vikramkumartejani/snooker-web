@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[70px] pt-[40px] text-white dark:bg-black dark:border-t border-white/20"
+      className="px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[70px] pt-[60px] md:pt-[110px] text-white dark:bg-black dark:border-t border-white/20"
     >
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col-reverse md:flex-row gap-[16px] lg:gap-[63px] items-center lg:mb-[16px] mb-[32px]">
