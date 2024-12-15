@@ -52,28 +52,37 @@ const testimonials = [
   },
   {
     id: 6,
-    text: "I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.",
-    author: "Tommy Smith",
-    position: "Founder of Continental",
-    rating: 5,
-    logo: "/assets/continental-logo.png",
-  },
-  {
-    id: 7,
-    text: "I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.",
-    author: "Tommy Smith",
-    position: "Founder of Continental",
-    rating: 5,
-    logo: "/assets/continental-logo.png",
-  },
-  {
-    id: 8,
-    text: "I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.",
-    author: "Tommy Smith",
+    text: "All the requirements for developers have been taken into consideration, so I'm able to build any interface I want.",
+    author: "Sara Smith",
     position: "Founder of Continental",
     rating: 4,
     logo: "/assets/continental-logo.png",
   },
+  {
+    id: 7,
+    text: "All the requirements for developers have been taken into consideration, so I'm able to build any interface I want.",
+    author: "Sara Smith",
+    position: "Founder of Continental",
+    rating: 4,
+    logo: "/assets/continental-logo.png",
+  },
+  {
+    id: 8,
+    text: "All the requirements for developers have been taken into consideration, so I'm able to build any interface I want.",
+    author: "Sara Smith",
+    position: "Founder of Continental",
+    rating: 4,
+    logo: "/assets/continental-logo.png",
+  },
+  {
+    id: 9,
+    text: "All the requirements for developers have been taken into consideration, so I'm able to build any interface I want.",
+    author: "Sara Smith",
+    position: "Founder of Continental",
+    rating: 4,
+    logo: "/assets/continental-logo.png",
+  },
+
 ];
 
 export default function Testimonials() {
@@ -82,28 +91,28 @@ export default function Testimonials() {
       index < rating ? (
         <MdOutlineStar
           key={index}
-          className="text-[22px] md:text-[30px] text-[#FFB400]"
+          className="text-[22px] md:text-[30px] text-[#FFB400] dark:text-yellow-300"
         />
       ) : (
         <MdOutlineStarBorder
           key={index}
-          className="text-[22px] md:text-[30px] text-[#2E263D4D]"
+          className="text-[22px] md:text-[30px] text-[#2E263D4D] dark:text-gray-600"
         />
       )
     );
   };
 
   return (
-    <section className="mb-[60px] md:mb-[110px]">
+    <section className="pb-[60px] md:pb-[70px] dark:bg-black">
       <div className="mb-[40px] md:mb-[60px] px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-[1280px] mx-auto">
           <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             TESTIMONIALS
           </span>
-          <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish mb-[12px]">
+          <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish dark:text-white mb-[12px]">
             What Our Users Says
           </h2>
-          <p className="text-grayish text-[12px] md:text-[16px] max-w-[500px] mx-auto">
+          <p className="text-grayish dark:text-white/90 text-[12px] md:text-[16px] max-w-[500px] mx-auto">
             There are many variations of passages of Lorem Ipsum available but
             the majority have suffered alteration in some form.
           </p>
@@ -114,7 +123,7 @@ export default function Testimonials() {
         <Swiper
           modules={[Pagination, Autoplay]}
           centeredSlides={true}
-          slidesPerView={1} // Default behavior for screens below 640px
+          slidesPerView={1}
           loop={true}
           autoplay={{
             delay: 3000,
@@ -128,15 +137,15 @@ export default function Testimonials() {
           }}
           breakpoints={{
             640: {
-              slidesPerView: 2.5, // For screens >= 640px
+              slidesPerView: 1,
               spaceBetween: 20,
             },
             1024: {
-              slidesPerView: 3.5, // For screens >= 1024px
+              slidesPerView: 3.5,
               spaceBetween: 30,
             },
             1279: {
-              slidesPerView: 4.5, // For screens >= 1279px
+              slidesPerView: 4.5,
               spaceBetween: 70,
             },
           }}
@@ -144,7 +153,7 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id} className="sm:px-0 px-4">
-              <div className="bg-white rounded-[12px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
+              <div className="bg-white dark:bg-greenish rounded-[12px] min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
                 <div className="h-[26.1px] mb-[18.35px]">
                   <Image
                     src={testimonial.logo}
@@ -154,21 +163,22 @@ export default function Testimonials() {
                     className="object-contain"
                   />
                 </div>
-                <p className="text-[12px] md:text-[15px] text-[#2E2E2EE5] mb-[18px] sm:min-h-[70px] min-h-[50px]">
+                <p className="text-[12px] md:text-[15px] text-[#2E2E2EE5] dark:text-gray-200 mb-[18px] sm:min-h-[70px] min-h-[50px]">
                   {testimonial.text}
                 </p>
                 <div className="flex gap-[2px] mb-[16px]">
                   {renderStars(testimonial.rating)}
                 </div>
                 <div>
-                  <h4 className="text-[15px] font-[500] text-[#2E2E2EE5]">
+                  <h4 className="text-[15px] font-[500] text-[#2E2E2EE5] dark:text-gray-200">
                     {testimonial.author}
                   </h4>
-                  <p className="text-[13px] text-[#2E2E2EB2] pt-[2px]">
+                  <p className="text-[13px] text-[#2E2E2EB2] dark:text-white pt-[2px]">
                     {testimonial.position}
                   </p>
                 </div>
               </div>
+
             </SwiperSlide>
           ))}
         </Swiper>

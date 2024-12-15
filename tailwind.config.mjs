@@ -16,6 +16,11 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        'light-gradient':
+          "radial-gradient(50% 50% at 50% 50%, rgba(240, 255, 247, 0) 0%, #F0FFF7 100%)",
+        'dark-gradient': "radial-gradient(50% 50% at 50% 50%, #F0FFF7 0%, #F0FFF7 100%)",
+      },
     },
   },
   plugins: [],

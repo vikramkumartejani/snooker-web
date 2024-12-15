@@ -76,8 +76,8 @@ const features = [
 
 export default function Features() {
   return (
-    <section>
-      <img src="/assets/top-wave.png" alt="top wave" />
+    <section className="pt-[40px] dark:bg-black">
+      <img src="/assets/top-wave.png" alt="top wave" className="w-full" />
       <div className="relative">
         <Image
           src="/assets/features-cube.png"
@@ -96,11 +96,11 @@ export default function Features() {
 
         <div
           id="features"
-          className="py-[21px] md:py-[60px] lg:py-[84px] px-4"
-          style={{
-            background:
-              "radial-gradient(50% 50% at 50% 50%, rgba(240, 255, 247, 0) 0%, #F0FFF7 100%)",
-          }}
+          className="py-[21px] md:py-[60px] lg:py-[84px] px-4 bg-light-gradient dark:bg-dark-gradient"
+          // style={{
+          //   background:
+          //     "radial-gradient(50% 50% at 50% 50%, rgba(240, 255, 247, 0) 0%, #F0FFF7 100%)",
+          // }}
         >
           <div className="max-w-[1280px] mx-auto">
             <div className="text-center mb-[58px]">
@@ -120,11 +120,11 @@ export default function Features() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:gap-[46px] md:gap-8 gap-[24px] pb-[60px]">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 max-w-[1127px] mx-auto xl:gap-[46px] md:gap-8 gap-[24px] pb-[60px]">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-[20px] px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
+                  className="bg-white rounded-[20px] border px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
                 >
                   <div className="min-w-[38px] min-h-[38px]">
                     <Image
@@ -147,7 +147,7 @@ export default function Features() {
           </div>
         </div>
       </div>
-      <img src="/assets/bottom-wave.png" alt="top wave" />
+      <img src="/assets/bottom-wave.png" alt="top wave" className="w-full" />
     </section>
   );
 }

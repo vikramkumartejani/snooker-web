@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4DC488] text-white px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-[110px] lg:gap-8 md:gap-[110px] gap-[32px] md:py-[67px] py-[32px]">
           {/* Company Info */}
@@ -14,7 +14,14 @@ export default function Footer() {
                 alt="logo"
                 width={172}
                 height={52}
-                className="xl:w-[172px] lg:w-[168px] w-[140px] lg:h-[52px] md:h-[45px] h-[42.33px] object-contain"
+                className="xl:w-[172px] lg:w-[168px] w-[140px] lg:h-[52px] md:h-[45px] h-[42.33px] dark:hidden block object-contain"
+              />
+              <Image
+                src="/assets/dark-logo.svg"
+                alt="logo"
+                width={172}
+                height={52}
+                className="xl:w-[172px] lg:w-[168px] w-[140px] lg:h-[52px] md:h-[45px] h-[42.33px] dark:block hidden object-contain"
               />
             </Link>
             <p className="mt-[10px] md:mt-[15px] text-white text-[12px] sm:text-[14px]">
@@ -49,7 +56,7 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your e-mail address"
-                  className="w-full h-[42px] md:h-[48px] px-[23px] placeholder:text-[12px] md:placeholder:text-[14px] font-[500] rounded-[16px] bg-[#FFFFFF33] text-white focus:outline-none focus:ring-[0.5px] focus:ring-white placeholder:text-white"
+                  className="w-full h-[42px] md:h-[48px] dark:border-[1px] border-white px-[23px] placeholder:text-[12px] my-auto pb-0.5 md:placeholder:text-[14px] font-[500] rounded-[16px] bg-[#FFFFFF33] dark:bg-greenish text-white focus:outline-none focus:ring-[0.5px] focus:ring-white placeholder:text-white"
                   required
                 />
                 <button
@@ -67,7 +74,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t-[1px] border-white md:py-[30px] py-[24px]">
+        <div className="border-t-[1px] border-white dark:border-greenish md:py-[30px] py-[24px]">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-[21px]">
             <p className="text-white text-[12px] font-[500]">
               Copyright 2023 abc. All rights reserved.

@@ -51,7 +51,7 @@ export default function StoreAutomation() {
 
   const DeviceCard = ({ device }) => (
     <div
-      className="bg-white rounded-[12px] overflow-hidden"
+      className="bg-white rounded-[12px] overflow-hidden "
       style={{ boxShadow: "2px 8px 24px 0px #0000000F" }}
     >
       <div className="relative h-[173px] w-full">
@@ -76,16 +76,16 @@ export default function StoreAutomation() {
   );
 
   return (
-    <section className="sm:px-6 lg:px-8 mb-[60px] md:mb-[110px]">
+    <section className="sm:px-6 lg:px-8 pb-[60px] md:pb-[110px] dark:bg-black pt-[40px]">
       <div className="max-w-[1280px] mx-auto">
         <div className="sm:px-0 px-4 text-center mb-[30px] md:mb-[40px]">
-          <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
+          <span className="text-greenish  text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             CHECK IT OUT
           </span>
-          <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish mb-[12px]">
+          <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish dark:text-white mb-[12px]">
             Store Automation
           </h2>
-          <p className="text-grayish text-[12px] md:text-[16px] max-w-[500px] mx-auto">
+          <p className="text-grayish dark:text-white/90 text-[12px] md:text-[16px] max-w-[500px] mx-auto">
             There are many variations of passages of Lorem Ipsum available but
             the majority have suffered alteration in some form.
           </p>

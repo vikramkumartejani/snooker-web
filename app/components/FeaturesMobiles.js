@@ -8,7 +8,7 @@ export default function FeaturesMobiles() {
   ];
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 relative">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 relative bg-white dark:bg-black">
       <Image
         src="/assets/feature-mobile-cube.png"
         alt="cube"
@@ -17,7 +17,7 @@ export default function FeaturesMobiles() {
         className="md:w-[91.45px] w-[10vw] absolute right-4 md:top-0 top-[7vw] z-[2]"
       />
       <div className="max-w-[1280px] mx-auto relative z-[1]">
-        <div className="bg-[#4DC488] rounded-[24px] overflow-hidden relative">
+        <div className="bg-[#4DC488] rounded-[24px] overflow-hidden relative max-w-[1140px] mx-auto">
           <div className="grid md:grid-cols-2 xl:gap-[55px] md:gap-4 items-end">
             {/* Content */}
             <div className="text-white z-10 ps-[14px] sm:ps-[20px] md:ps-[40px] lg:ps-[80px] md:pe-0 pe-[14px] sm:pe-[20px] md:py-[70px] py-[45px]">

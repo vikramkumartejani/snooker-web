@@ -228,7 +228,7 @@ function VideoPlayer({ src }) {
 
 export default function VideoTestimonials() {
   return (
-    <section className="mb-[60px] md:mb-[110px] px-4 sm:px-6 lg:px-8 pb-[40px] sm:pb-[80px] lg:pb-[150px] relative">
+    <section className="dark:bg-black pb-[60px] pt-[30px] md:pb-[110px] px-4 sm:px-6 lg:px-8 pb-[40px] sm:pb-[80px] lg:pb-[150px] relative">
       <img
         src="/assets/bottom-left-video-testimonial.png"
         alt="background objects"
@@ -245,10 +245,10 @@ export default function VideoTestimonials() {
             <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
               TESTIMONIALS
             </span>
-            <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish mb-[12px]">
+            <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish dark:text-white mb-[12px]">
               What Our Users Says
             </h2>
-            <p className="text-grayish text-[12px] md:text-[16px] max-w-[500px] mx-auto">
+            <p className="text-grayish text-[12px] md:text-[16px] dark:text-white/80 max-w-[500px] mx-auto">
               There are many variations of passages of Lorem Ipsum available but
               the majority have suffered alteration in some form.
             </p>

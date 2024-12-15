@@ -49,16 +49,25 @@ export default function Navbar() {
           <div className="flex justify-between items-center lg:h-[70px] h-[60px]">
             <Link href="/" className="flex items-center">
               <Image
-                src="/assets/logo.png"
+                src="/assets/logo-svg.svg"
                 alt="logo"
                 width={172}
                 height={52}
-                className="xl:w-[172px] lg:w-[168px] w-[120px] lg:h-[52px] md:h-[45px] h-[35px] object-contain"
+                className="xl:w-[172px] lg:w-[168px] w-[120px] lg:h-[52px] md:h-[45px] h-[35px] dark:hidden block object-contain"
+              />
+              <Image
+                src="/assets/dark-logo.svg"
+                alt="logo"
+                width={172}
+                height={52}
+                className="xl:w-[172px] lg:w-[168px] w-[120px] lg:h-[52px] md:h-[45px] h-[35px] dark:block hidden object-contain"
               />
             </Link>
 
             <div className="flex items-center gap-6">
-              <ThemeToggle />
+              <div className="lg:hidden block">
+                <ThemeToggle />
+              </div>
               <button
                 className="lg:hidden text-gray-700 text-2xl"
                 onClick={toggleDrawer}

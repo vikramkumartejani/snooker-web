@@ -108,10 +108,10 @@ export default function Pricing() {
               </h3>
               <div className="mb-[50px] md:mb-[70px] flex items-center md:gap-[10px] gap-[7px] relative">
                 <div className="flex items-start">
-                  <span className="text-[10.99px] md:text-[14px] md:text-[15.82px] text-[#2E2E2EE5] font-[500] mt-1">
+                  <span className="text-[10.99px] sm:text-[14px] md:text-[15.82px] text-[#2E2E2EE5] font-[500] mt-1">
                     $
                   </span>
-                  <span className="text-[29.17px] md:text-[30px] md:text-[42px] text-blackish font-bold md:leading-[42.2px]">
+                  <span className="text-[29.17px] md:text-[30px] lg:text-[42px] text-blackish font-bold md:leading-[42.2px]">
                     {plan.price}
                   </span>
                 </div>
@@ -124,7 +124,7 @@ export default function Pricing() {
                   </p>
                 </div>
                 <img
-                  src="/assets/pricing-curve.png"
+                  src="/assets/pricing-line-bottom.svg"
                   alt="curve"
                   className="absolute bottom-[-15px] w-[43px] md:w-auto left-0"
                 />
