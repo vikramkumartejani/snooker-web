@@ -105,7 +105,7 @@ export default function Testimonials() {
   return (
     <section className="pb-[60px] md:pb-[70px] dark:bg-black">
       <div className="mb-[40px] md:mb-[60px] px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-[1280px] mx-auto">
+        <div data-aos="fade-up" className="text-center max-w-[1280px] mx-auto">
           <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             TESTIMONIALS
           </span>
@@ -153,7 +153,7 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id} className="sm:px-0 px-4">
-              <div className="bg-white dark:bg-greenish rounded-[12px] min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
+              <div data-aos="fade-up" className="bg-white dark:bg-greenish rounded-[12px] min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
                 <div className="h-[26.1px] mb-[18.35px]">
                   <Image
                     src={testimonial.logo}

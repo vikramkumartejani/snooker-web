@@ -37,11 +37,11 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose-us"
-      className="px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[70px] pt-[60px] md:pt-[110px] text-white dark:bg-black dark:border-t border-white/20"
+      className="overflow-hidden px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[70px] pt-[60px] md:pt-[110px] text-white dark:bg-black dark:border-t border-white/20"
     >
       <div className="max-w-[1280px] mx-auto">
         <div className="flex flex-col-reverse md:flex-row gap-[16px] lg:gap-[63px] items-center lg:mb-[16px] mb-[32px]">
-          <div className="md:w-1/2 flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center">
+          <div data-aos="fade-up" className="md:w-1/2 flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center">
             <span
               className="inline-block px-[10px] py-[2px] bg-[#DCFCE7] text-greenish dark:text-black rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
               style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
               platform.
             </p>
           </div>
-          <div className="md:w-1/2 w-full relative md:h-[400px] h-[300px]">
+          <div  data-aos="fade-left" className="md:w-1/2 w-full relative md:h-[400px] h-[300px]">
             <Image
               src="/assets/why-choose-us.png"
               alt="3D Snooker Facility Illustration"
@@ -71,6 +71,7 @@ export default function WhyChooseUs() {
           {features.map((feature) => (
             <div
               key={feature.number}
+               data-aos="fade-up"
               className="flex flex-col md:items-start md:justify-start items-center justify-center md:text-left text-center"
             >
               <div className="flex-shrink-0 mb-[16px]">

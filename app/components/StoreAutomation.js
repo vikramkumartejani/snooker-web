@@ -51,6 +51,7 @@ export default function StoreAutomation() {
 
   const DeviceCard = ({ device }) => (
     <div
+    data-aos="fade-up"
       className="bg-white rounded-[12px] overflow-hidden "
       style={{ boxShadow: "2px 8px 24px 0px #0000000F" }}
     >
@@ -78,7 +79,7 @@ export default function StoreAutomation() {
   return (
     <section className="sm:px-6 lg:px-8 pb-[60px] md:pb-[110px] dark:bg-black pt-[40px]">
       <div className="max-w-[1280px] mx-auto">
-        <div className="sm:px-0 px-4 text-center mb-[30px] md:mb-[40px]">
+        <div data-aos="fade-up" className="sm:px-0 px-4 text-center mb-[30px] md:mb-[40px]">
           <span className="text-greenish  text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             CHECK IT OUT
           </span>

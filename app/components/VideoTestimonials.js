@@ -130,6 +130,7 @@ function VideoPlayer({ src }) {
 
   return (
     <div
+    data-aos="fade-up"
       className="relative rounded-[16px] overflow-hidden bg-[#EEEEEE] border-[0.7px] border-greenish group"
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
@@ -228,20 +229,22 @@ function VideoPlayer({ src }) {
 
 export default function VideoTestimonials() {
   return (
-    <section className="dark:bg-black pb-[60px] pt-[30px] md:pb-[110px] px-4 sm:px-6 lg:px-8 pb-[40px] sm:pb-[80px] lg:pb-[150px] relative">
+    <section className="overflow-hidden dark:bg-black pb-[60px] pt-[30px] md:pb-[110px] px-4 sm:px-6 lg:px-8 pb-[40px] sm:pb-[80px] lg:pb-[150px] relative">
       <img
         src="/assets/bottom-left-video-testimonial.png"
         alt="background objects"
-        className="absolute xl:w-auto w-[16vw] left-0 bottom-0 z-[1]"
+        data-aos="fade-right"
+        className="absolute xl:w-auto w-[16vw] left-0 bottom-0 z-[1] overflow-hidden "
       />
       <img
         src="/assets/bottom-right-video-testimonial.png"
         alt="background objects"
-        className="absolute xl:w-auto w-[9vw] right-0 bottom-0 z-[1]"
+        data-aos="fade-left"
+        className="absolute xl:w-auto w-[9vw] right-0 bottom-0 z-[1] overflow-hidden"
       />
       <div className="max-w-[1280px] mx-auto">
         <div className="mb-[40px] md:mb-[60px]">
-          <div className="text-center max-w-[1280px] mx-auto">
+          <div data-aos="fade-up" className="text-center max-w-[1280px] mx-auto">
             <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
               TESTIMONIALS
             </span>

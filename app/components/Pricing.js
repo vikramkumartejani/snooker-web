@@ -62,25 +62,28 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative"
+      className="overflow-hidden pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative"
     >
       <img
         src="/assets/pricing-15-ball-object.png"
         alt="snooker ball 15"
+        data-aos="fade-right"
         className="absolute left-0 top-0 lg:w-[11.7vw] w-[13.3vw]"
       />
       <img
         src="/assets/pricing-1-ball-object.png"
         alt="snooker ball 15"
+        data-aos="fade-left"
         className="absolute md:right-[33px] right-[24.8px] top-0 lg:w-[9vw] w-[13.3vw]"
       />
       <img
         src="/assets/pricing-stick-object.png"
         alt="snooker ball 15"
+        data-aos="fade-up"
         className="absolute right-0 top-0 w-[13.3vw]"
       />
       <div className="max-w-[1280px] mx-auto">
-        <div className="text-center px-4 sm:px-6 lg:px-0">
+        <div data-aos="fade-up" className="text-center px-4 sm:px-6 lg:px-0">
           <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             PRICING
           </span>
@@ -98,6 +101,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.id}
+              data-aos="fade-up"
               className="md:w-auto w-[200px] md:min-w-auto min-w-[200px] bg-white rounded-[16px] md:rounded-[20px] px-[17px] md:px-[24px] md:pb-[47px] pb-[29px] pt-[12px] md:pt-[19px] transition-all duration-300 group hover:border-greenish border border-transparent"
               style={{
                 boxShadow: "3.85px 5.78px 38.5px 0px #0000000D",

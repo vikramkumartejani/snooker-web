@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <main>
       <Hero data-aos="fade-up" />
-      <WhyChooseUs />
-      <Features />
-      <FeaturesMobiles />
-      <VideoTestimonials />
-      <Testimonials />
-      <StoreAutomation />
-      <Pricing />
-      <DownloadSection />
+      <WhyChooseUs data-aos="fade-up" />
+      <Features data-aos="fade-up" />
+      <FeaturesMobiles data-aos="fade-up" />
+      <VideoTestimonials data-aos="fade-up" />
+      <Testimonials data-aos="fade-up" />
+      <StoreAutomation data-aos="fade-up" />
+      <Pricing data-aos="fade-up" />
+      <DownloadSection data-aos="fade-up" />
     </main>
   );
 }

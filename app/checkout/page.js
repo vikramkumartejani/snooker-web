@@ -37,16 +37,16 @@ export default function Checkout() {
   ];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black pt-[110px] px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[110px]">
+    <main className="overflow-hidden min-h-screen bg-white dark:bg-black pt-[110px] px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[110px]">
       <section className="max-w-[1200px] mx-auto">
-        <h1 className="lg:pt-[35px] pb-[32px] md:pb-[50px] lg:pb-[70px] text-[24px] md:text-[40px] lg:text-[50px] text-blackish dark:text-white font-[700]">
+        <h1 data-aos="fade-right" className="lg:pt-[35px] pb-[32px] md:pb-[50px] lg:pb-[70px] text-[24px] md:text-[40px] lg:text-[50px] text-blackish dark:text-white font-[700]">
           Checkout
         </h1>
         <div className="flex lg:flex-row flex-col xl:gap-[50px] md:gap-4 gap-[50px]">
           {/* Left Column */}
           <div className="flex-grow flex-shrink space-y-[24px] overflow-x-auto">
             {/* Automation Section */}
-            <div>
+            <div data-aos="fade-up">
               <h2 className="text-[18px] md:text-[30px] dark:text-white/90 font-[500] md:font-[600] mb-[12px] md:mb-[24px]">
                 Automation
               </h2>
@@ -79,17 +79,17 @@ export default function Checkout() {
 
             {/* Store Information */}
             <div>
-              <h2 className="md:block hidden text-[18px] md:text-[30px] dark:text-white  font-[500] md:font-[600] mb-[12px] md:mb-[24px]">
+              <h2 data-aos="fade-right" className="md:block hidden text-[18px] md:text-[30px] dark:text-white  font-[500] md:font-[600] mb-[12px] md:mb-[24px]">
                 Store Information
               </h2>
-              <form className="md:space-y-[20px] space-y-[16px]">
+              <form data-aos="fade-right" className="overflow-hidden md:space-y-[20px] space-y-[16px]">
                 <input
                   type="text"
                   name="storeName"
                   placeholder="Store Name"
                   value={formData.storeName}
                   onChange={handleInputChange}
-                  className="w-full rounded-[16px] outline-none border dark:bg-transparent dark:border-white dark:text-white border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
+                  className="w-full rounded-[16px]  outline-none border dark:bg-transparent dark:border-white dark:text-white border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
                 />
 
                 <div className="grid md:grid-cols-2 xl:gap-[35px] md:gap-[24px] gap-[10px]">
@@ -164,7 +164,7 @@ export default function Checkout() {
           </div>
 
           {/* Right Column - Order Overview */}
-          <div className="lg:max-w-[467px] lg:min-w-[380px] md:border border-[#EEEEEE] rounded-[20px] md:shadow-lg md:px-[30px] md:py-[34px]">
+          <div data-aos="fade-left" className="lg:max-w-[467px] lg:min-w-[380px] md:border border-[#EEEEEE] rounded-[20px] md:shadow-lg md:px-[30px] md:py-[34px]">
             <h2 className="text-[28px] font-[400] mb-[30px] dark:text-white">Order Overview</h2>
 
             <div className="mb-[48px] flex items-center gap-[15px] relative">

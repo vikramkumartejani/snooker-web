@@ -4,25 +4,29 @@ import { FaApple } from "react-icons/fa";
 
 const DownloadSection = () => {
   return (
-    <section className="dark:bg-black dark:border-b border-white/20 relative lg:min-h-[734px] md:min-h-[600px] sm:min-h-[500px] min-h-[400px] flex flex-col items-center justify-center">
+    <section className="overflow-hidden dark:bg-black dark:border-b border-white/20 relative lg:min-h-[734px] md:min-h-[600px] sm:min-h-[500px] min-h-[400px] flex flex-col items-center justify-center">
       <img
         src="/assets/top-left-objects.png"
         alt="background objects"
+        data-aos="fade-right"
         className="absolute xl:w-auto w-[48vw] left-0 top-0 z-[1]"
       />
       <img
         src="/assets/bottom-left-objects.png"
         alt="background objects"
+        data-aos="fade-up"
         className="absolute xl:w-auto w-[40vw] left-0 bottom-0 z-[1]"
       />
       <img
         src="/assets/bottom-right-objects.png"
         alt="background objects"
+        data-aos="fade-up"
         className="absolute xl:w-auto w-[48vw] right-0 bottom-0 z-[1]"
       />
       <img
         src="/assets/top-right-objects.png"
         alt="background objects"
+        data-aos="fade-left"
         className="absolute xl:w-auto w-[40vw] right-0 top-0 z-[1]"
       />
       <img
@@ -31,7 +35,7 @@ const DownloadSection = () => {
         className="absolute xl:w-auto w-[55vw] right-0 -top-1 z-[1]"
       />
       <div className="lg:px-8 sm:px-6 px-4 relative z-[2]">
-        <div className="sm:max-w-[923px] max-w-[355px] mx-auto text-center flex flex-col items-center justify-center">
+        <div data-aos="fade-up" className="sm:max-w-[923px] max-w-[355px] mx-auto text-center flex flex-col items-center justify-center">
           <h1 className="text-[22px] sm:text-[35px] md:text-[52px] md:leading-[62px] sm:leading-[50px] leading-[28px] font-[600] text-blackish dark:text-white mb-[15.64px] md:mb-[20px]">
             Download Now and Get Started Immediately!
           </h1>

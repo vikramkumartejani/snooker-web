@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
+    <footer className="overflow-hidden bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-[110px] lg:gap-8 md:gap-[110px] gap-[32px] md:py-[67px] py-[32px]">
           {/* Company Info */}
-          <div>
-            <Link href="/" className="flex items-center">
+          <div data-aos="fade-right">
+            <Link href="/" className="flex items-center" >
               <Image
                 src="/assets/footer-logo.svg"
                 alt="logo"
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div data-aos="fade-up">
             <h3 className="text-[14px] font-[500] mb-[19px]">CONTACT US</h3>
             <div className="space-y-[19px]">
               <p className="text-white text-[14px] font-[500] tracking-[1%]">
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           {/* Email Subscription */}
-          <div>
+          <div data-aos="fade-left">
             <h3 className="text-[14px] font-[500] md:mb-[19px] mb-[14px]">
               SIGN UP FOR EMAIL UPDATES
             </h3>
@@ -79,7 +79,7 @@ export default function Footer() {
             <p className="text-white text-[12px] font-[500]">
               Copyright 2023 abc. All rights reserved.
             </p>
-            <nav className="flex gap-[40px]">
+            <nav className="flex gap-5 md:gap-[40px]">
               <a
                 href="/#home"
                 className="text-[12px] font-[500] hover:underline"

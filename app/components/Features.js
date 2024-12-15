@@ -76,7 +76,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="pt-[40px] dark:bg-black">
+    <section className="overflow-hidden pt-[40px] dark:bg-black">
       <img src="/assets/top-wave.png" alt="top wave" className="w-full" />
       <div className="relative">
         <Image
@@ -84,6 +84,7 @@ export default function Features() {
           alt="cube"
           width={130.38}
           height={116.06}
+          data-aos="fade-left"
           className="md:w-[130.38] w-[10vw] absolute right-4 -top-10 z-[2]"
         />
         <Image
@@ -91,7 +92,8 @@ export default function Features() {
           alt="cube"
           width={130.38}
           height={116.06}
-          className="md:w-[130.38] w-[10vw] absolute left-4 -bottom-20 z-[2]"
+          data-aos="fade-right"
+          className=" md:w-[130.38] w-[10vw] absolute left-4 -bottom-20 z-[2]"
         />
 
         <div
@@ -103,7 +105,7 @@ export default function Features() {
           // }}
         >
           <div className="max-w-[1280px] mx-auto">
-            <div className="text-center mb-[58px]">
+            <div data-aos="fade-up" className="text-center mb-[58px]">
               <span
                 className="inline-block px-[8px] py-[2px] bg-[#DCFCE7] text-greenish rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
                 style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
@@ -124,6 +126,7 @@ export default function Features() {
               {features.map((feature, index) => (
                 <div
                   key={index}
+                  data-aos="fade-up"
                   className="bg-white rounded-[20px] border px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
                 >
                   <div className="min-w-[38px] min-h-[38px]">
