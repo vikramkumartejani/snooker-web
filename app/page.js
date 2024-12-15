@@ -11,7 +11,7 @@ import DownloadSection from "./components/DownloadSection";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero data-aos="fade-up" />
       <WhyChooseUs />
       <Features />
       <FeaturesMobiles />

@@ -5,12 +5,12 @@ export default function Hero() {
   return (
     <div
       id="home"
-      className="relative min-h-screen pt-16 dark:bg-black"
+      className="overflow-hidden relative min-h-screen pt-16 dark:bg-black"
     >
       <div className="ps-4 sm:ps-6 pe-4 sm:pe-6 lg:pe-0 lg:ps-8 xl:pe-8">
         <div className="max-w-[1280px] mx-auto pt-[50px] pb-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center ">
-            <div className="relative z-30 pb-[37px] lg:pb-[60px] lg:pt-[20px] flex flex-col lg:items-start items-center justify-center lg:justify-start lg:text-left text-center">
+            <div data-aos="fade-up" className="relative z-30 pb-[37px] lg:pb-[60px] lg:pt-[20px] flex flex-col lg:items-start items-center justify-center lg:justify-start lg:text-left text-center">
               <span
                 className="inline-block px-[8px] py-[2px] bg-greenish text-white rounded-full text-[10px] md:text-[12px] font-[500] font-poppins uppercase mb-[6px] md:mb-[11px]"
                 style={{ boxShadow: "0px 1px 2px 0px #6951FF0D" }}
@@ -43,7 +43,7 @@ export default function Hero() {
                 </button>
               </div>
             </div>
-            <div className="lg:absolute flex items-center justify-center right-0 bottom-0 z-30">
+            <div  data-aos="fade-left" className="lg:absolute flex items-center justify-center right-0 bottom-0 z-30">
               <img
                 src="/assets/hero-img.png"
                 alt="Snooker Table Illustration"
