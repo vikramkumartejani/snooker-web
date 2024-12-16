@@ -37,7 +37,7 @@ export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div id="home" className="overflow-hidden relative min-h-screen pt-16 dark:bg-black">
+    <div id="home" className="overflow-hidden relative pt-16 dark:bg-black">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
