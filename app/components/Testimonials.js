@@ -1,11 +1,9 @@
 "use client";
-
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 import Image from "next/image";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -60,8 +58,8 @@ const testimonials = [
   },
   {
     id: 7,
-    text: "All the requirements for developers have been taken into consideration, so I'm able to build any interface I want.",
-    author: "Sara Smith",
+    text: "I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard sites on almost any project.",
+    author: "Tommy Smith",
     position: "Founder of Continental",
     rating: 4,
     logo: "/assets/continental-logo.png",
@@ -86,6 +84,12 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [swiperKey, setSwiperKey] = useState(0);
+
+  useEffect(() => {
+    setSwiperKey((prevKey) => prevKey + 1);
+  }, []);
+
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) =>
       index < rating ? (
@@ -121,10 +125,13 @@ export default function Testimonials() {
 
       <div className="testimonial-slider">
         <Swiper
+        key={swiperKey}
           modules={[Pagination, Autoplay]}
           centeredSlides={true}
           slidesPerView={1}
           loop={true}
+          observer={true}  
+          observeParents={true} 
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -152,7 +159,7 @@ export default function Testimonials() {
           className="pb-14"
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className="sm:px-0 px-4">
+            <SwiperSlide key={testimonial.id} className="sm:px-2 md:px-0 px-4">
               <div className="bg-white dark:bg-greenish rounded-[12px] min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
                 <div className="h-[26.1px] mb-[18.35px]">
                   <Image
