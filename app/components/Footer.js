@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 
 export default function Footer() {
@@ -81,14 +81,17 @@ export default function Footer() {
               SIGN UP FOR EMAIL UPDATES
             </h3>
             <div className="flex items-center space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white ">
-                <FaFacebook size={24} />
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FaYoutube size={24} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <FaTwitter size={24} />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FaFacebook size={24} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white ">
                 <FaInstagram size={24} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FaTwitter size={24} />
               </a>
             </div>
             <p className="text-[14px] font-[500] tracking-[2%] md:mt-[22px] mt-[16px]">
@@ -110,32 +113,25 @@ export default function Footer() {
                 className="text-[12px] font-[500] hover:underline"
               >
                 Shipping policy
-
               </a>
               <a
                 href="/#why-choose-us"
                 className="text-[12px] font-[500] hover:underline"
               >
                 Terms and conditions
-
               </a>
               <a
                 href="/#features"
                 className="text-[12px] font-[500] hover:underline"
               >
                 Privacy policy
-
               </a>
               <a
                 href="/#features"
                 className="text-[12px] font-[500] hover:underline"
               >
-              Cancellation/Refund Policy
-
-
-
+                Cancellation/Refund Policy
               </a>
-
             </nav>
           </div>
         </div>
