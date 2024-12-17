@@ -122,7 +122,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="testimonial-slider !w-full !max-w-[1920px] mx-auto px-4">
+      <div className="testimonial-slider w-full !max-w-[1920px] mx-auto px-4">
         {isClient ? (
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -131,8 +131,8 @@ export default function Testimonials() {
             loop={true}
             observer={true}
             observeParents={true}
-            resizeObserver={false}
-            updateOnWindowResize={false}
+            resizeObserver={true}
+            updateOnWindowResize={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
