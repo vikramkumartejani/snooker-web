@@ -126,7 +126,7 @@ export default function Testimonials() {
         {isClient ? (
           <Swiper
             modules={[Pagination, Autoplay]}
-            centeredSlides={false}
+            centeredSlides={true}
             slidesPerView={1}
             loop={true}
             observer={true}
@@ -148,21 +148,13 @@ export default function Testimonials() {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
-              768: {
-                slidesPerView: 2,
+              1024: {
+                slidesPerView: 3.5,
                 spaceBetween: 30,
               },
-              1024: {
-                slidesPerView: 3,
+              1950: {
+                slidesPerView: 4.5,
                 spaceBetween: 40,
-              },
-              1440: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-              1800: {
-                slidesPerView: 5,
-                spaceBetween: 60,
               },
             }}
             className="pb-14"
