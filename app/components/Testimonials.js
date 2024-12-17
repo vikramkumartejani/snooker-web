@@ -157,7 +157,7 @@ export default function Testimonials() {
                 spaceBetween: 70,
               },
               1950: {
-                slidesPerView: 5,
+                slidesPerView: 5.5,
                 spaceBetween: 60,
               },
               2000: {
