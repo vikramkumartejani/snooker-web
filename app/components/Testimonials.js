@@ -159,7 +159,7 @@ export default function Testimonials() {
           className="pb-14"
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className="sm:px-2 md:px-0 px-4">
+            <SwiperSlide key={testimonial.id} className="sm:px-2 md:px-0 px-4 w-full">
               <div className="bg-white dark:bg-greenish rounded-[12px] !w-full !min-w-full !max-w-full min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
                 <div className="h-[26.1px] mb-[18.35px]">
                   <Image
