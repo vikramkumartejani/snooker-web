@@ -6,6 +6,7 @@ import Head from "next/head";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { CartProvider } from './context/CartContext';
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -21,9 +22,11 @@ export default function RootLayout({ children }) {
         </Head>
       </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

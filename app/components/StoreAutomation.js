@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { useCart } from "../context/CartContext";
 
 export default function StoreAutomation() {
   const [isMobile, setIsMobile] = useState(false);
+  const { addToCart } = useCart();
+
 
   useEffect(() => {
     const checkMobile = () => {
@@ -51,7 +53,7 @@ export default function StoreAutomation() {
 
   const DeviceCard = ({ device }) => (
     <div
-    data-aos="fade-up"
+      data-aos="fade-up"
       className="bg-white rounded-[12px] overflow-hidden "
       style={{ boxShadow: "2px 8px 24px 0px #0000000F" }}
     >
@@ -69,7 +71,7 @@ export default function StoreAutomation() {
         <p className="text-[#999999] text-[10px] md:text-[16px] mt-[8px]">
           {device.controller}
         </p>
-        <button className="w-full text-[16px] font-[600] mt-[15px] md:mt-[18px] bg-greenish text-white md:py-[12px] py-[9.5px] px-4 rounded-[16px] hover:bg-[#3da36e] transition-colors">
+        <button onClick={addToCart} className="w-full text-[16px] font-[600] mt-[15px] md:mt-[18px] bg-greenish text-white md:py-[12px] py-[9.5px] px-4 rounded-[16px] hover:bg-[#3da36e] transition-colors">
           Add to Cart
         </button>
       </div>
@@ -79,6 +81,7 @@ export default function StoreAutomation() {
   return (
     <section className="sm:px-6 lg:px-8 pb-[60px] md:pb-[110px] dark:bg-black pt-[40px]">
       <div className="max-w-[1280px] mx-auto">
+
         <div data-aos="fade-up" className="sm:px-0 px-4 text-center mb-[30px] md:mb-[40px]">
           <span className="text-greenish  text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             CHECK IT OUT

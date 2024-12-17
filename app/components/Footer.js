@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+
 
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-[110px] lg:gap-8 md:gap-[110px] gap-[32px] md:py-[67px] py-[32px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex items-start justify-between xl:gap-[60px] lg:gap-8 md:gap-[40px] gap-[32px] md:py-[67px] py-[32px]">
           {/* Company Info */}
-          <div data-aos="fade-right">
+          <div data-aos="fade-right" className="sm:max-w-[320px]">
             <Link href="/" className="flex items-center" >
               <Image
                 src="/assets/footer-logo.svg"
@@ -30,6 +32,33 @@ export default function Footer() {
             </p>
           </div>
 
+          <div data-aos="fade-up" className="flex gap-[19px] flex-col text-nowrap">
+            <a
+              href="/#home"
+              className="text-[14px] font-[500] hover:underline"
+            >
+              Home
+            </a>
+            <a
+              href="/#why-choose-us"
+              className="text-[14px] font-[500] hover:underline"
+            >
+              Why Choose Us
+            </a>
+            <a
+              href="/#features"
+              className="text-[14px] font-[500] hover:underline"
+            >
+              Features
+            </a>
+            <a
+              href="/#pricing"
+              className="text-[14px] font-[500] hover:underline"
+            >
+              Pricing
+            </a>
+          </div>
+
           {/* Contact Info */}
           <div data-aos="fade-up">
             <h3 className="text-[14px] font-[500] mb-[19px]">CONTACT US</h3>
@@ -47,26 +76,21 @@ export default function Footer() {
           </div>
 
           {/* Email Subscription */}
-          <div data-aos="fade-left">
-            <h3 className="text-[14px] font-[500] md:mb-[19px] mb-[14px]">
+          <div data-aos="fade-left" className="sm:max-w-[320px]">
+            <h3 className="text-[14px] font-[500] md:mb-[19px] mb-[10px]">
               SIGN UP FOR EMAIL UPDATES
             </h3>
-            <form className="w-full">
-              <div className="relative flex items-center">
-                <input
-                  type="email"
-                  placeholder="Your e-mail address"
-                  className="w-full h-[42px] md:h-[48px] dark:border-[1px] border-white px-[23px] placeholder:text-[12px] my-auto pb-0.5 md:placeholder:text-[14px] font-[500] rounded-[16px] bg-[#FFFFFF33] dark:bg-greenish text-white focus:outline-none focus:ring-[0.5px] focus:ring-white placeholder:text-white"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="absolute right-0 h-full xl:px-[35px] lg:px-[20px] md:px-[30px] px-[25px] bg-white text-greenish rounded-[16px] text-[14px] md:text-[16px] font-[600] hover:bg-opacity-90 transition-colors"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            <div className="flex items-center space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white ">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white ">
+                <FaInstagram size={24} />
+              </a>
+            </div>
             <p className="text-[14px] font-[500] tracking-[2%] md:mt-[22px] mt-[16px]">
               Sign up with your email address to receive news & updates
             </p>
@@ -79,31 +103,27 @@ export default function Footer() {
             <p className="text-white text-[12px] font-[500]">
               Copyright 2023 abc. All rights reserved.
             </p>
+            <p className="text-white text-[12px] font-medium">Designed by Auekeeper</p>
             <nav className="flex gap-5 md:gap-[40px]">
               <a
                 href="/#home"
                 className="text-[12px] font-[500] hover:underline"
               >
-                Home
+                Terms and Conditions
               </a>
               <a
                 href="/#why-choose-us"
                 className="text-[12px] font-[500] hover:underline"
               >
-                Why Choose Us
+                Privacy Policy
               </a>
               <a
                 href="/#features"
                 className="text-[12px] font-[500] hover:underline"
               >
-                Features
+                About Us
               </a>
-              <a
-                href="/#pricing"
-                className="text-[12px] font-[500] hover:underline"
-              >
-                Pricing
-              </a>
+
             </nav>
           </div>
         </div>

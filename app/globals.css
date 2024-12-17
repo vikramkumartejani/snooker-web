@@ -90,3 +90,65 @@ body {
     max-width: 100%;
   }
 }
+
+
+
+
+/* Animated border */
+.card-border {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border::before,
+.card-border::after {
+  content: "";
+  position: absolute;
+}
+
+.card-border::before {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 130%;
+  background: linear-gradient(
+    0deg,
+    rgba(56, 220, 201, 0.762) 13.7%,
+    rgba(56, 220, 200, 0.4) 27.55%,
+    #02695d 36.4%,
+    #38dcc8 53.88%,
+    rgba(56, 220, 201, 0.345) 89.18%
+  );
+  z-index: -2;
+  animation: border-wide 8s linear infinite;
+}
+
+@keyframes border-wide {
+  0% {
+    transform: rotateZ(0deg);
+    animation-timing-function: ease-in;
+  }
+  10% {
+    transform: rotateZ(-36deg);
+    animation-timing-function: linear;
+  }
+  90% {
+    transform: rotateZ(-324deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.card-border::after {
+  inset: 2px;
+  border-radius: 20px;
+}
+

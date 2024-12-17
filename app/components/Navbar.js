@@ -6,13 +6,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { useCart } from "../context/CartContext";
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("#home");
-
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
   const closeDrawer = () => setIsDrawerOpen(false);
+  const { cartCount } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +37,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <nav
@@ -94,8 +96,8 @@ export default function Navbar() {
               <a
                 href="/#home"
                 className={`relative font-poppins font-[500] ${activeSection === "#home"
-                    ? "text-greenish"
-                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                   } hover:text-greenish`}
               >
                 Home
@@ -107,8 +109,8 @@ export default function Navbar() {
               <a
                 href="/#why-choose-us"
                 className={`relative font-poppins font-[500] ${activeSection === "#why-choose-us"
-                    ? "text-greenish"
-                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                   } hover:text-greenish`}
               >
                 Why Choose Us
@@ -120,8 +122,8 @@ export default function Navbar() {
               <a
                 href="/#features"
                 className={`relative font-poppins font-[500] ${activeSection === "#features"
-                    ? "text-greenish"
-                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                   } hover:text-greenish`}
               >
                 Features
@@ -133,8 +135,8 @@ export default function Navbar() {
               <a
                 href="/#pricing"
                 className={`relative font-poppins font-[500] ${activeSection === "#pricing"
-                    ? "text-greenish"
-                    : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
                   } hover:text-greenish`}
               >
                 Pricing
@@ -147,13 +149,19 @@ export default function Navbar() {
 
             {/* Action Buttons */}
             <div className="lg:flex hidden items-center gap-[12px]">
-              <Link
-                href="/checkout"
-                className="flex items-center text-[#2E2E2EB2] dark:text-white font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] dark:border-white rounded-[12px] py-[8px] px-[16px]"
-              >
-                <IoCartOutline className="h-[24px] w-[24px]" />
-                <span className="ml-[6px]">Cart</span>
-              </Link>
+              <div className="relative">
+                <Link
+                  href="/checkout"
+                  className="flex items-center text-[#2E2E2EB2] dark:text-white font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] dark:border-white rounded-[12px] py-[8px] px-[16px]"
+                >
+                  <IoCartOutline className="h-[24px] w-[24px]" />
+                  <span className="ml-[6px]">Cart</span>
+                </Link>
+                <div className="w-5 h-5 bg-greenish absolute -top-1 rounded-md -right-2 flex items-center justify-center">
+                  <h3 className="text-white text-sm">{cartCount}</h3>
+                </div>
+              </div>
+
               <button className="flex items-center text-greenish font-poppins font-[500] hover:bg-greenish/20 border border-greenish rounded-[12px] py-[8px] px-[16px] transition">
                 <IoLogoWhatsapp className="h-[24px] w-[24px]" />
                 <span className="ml-[6px]">Contact Us</span>
@@ -200,8 +208,8 @@ export default function Navbar() {
             <a
               href="/#why-choose-us"
               className={`relative font-poppins font-[500] ${activeSection === "#why-choose-us"
-                  ? "text-greenish"
-                  : "text-[#2E2E2EB2]"
+                ? "text-greenish"
+                : "text-[#2E2E2EB2]"
                 } hover:text-greenish`}
               onClick={closeDrawer}
             >
@@ -214,8 +222,8 @@ export default function Navbar() {
             <a
               href="/#features"
               className={`relative font-poppins font-[500] ${activeSection === "#features"
-                  ? "text-greenish"
-                  : "text-[#2E2E2EB2]"
+                ? "text-greenish"
+                : "text-[#2E2E2EB2]"
                 } hover:text-greenish`}
               onClick={closeDrawer}
             >
@@ -228,8 +236,8 @@ export default function Navbar() {
             <a
               href="/#pricing"
               className={`relative font-poppins font-[500] ${activeSection === "#pricing"
-                  ? "text-greenish"
-                  : "text-[#2E2E2EB2]"
+                ? "text-greenish"
+                : "text-[#2E2E2EB2]"
                 } hover:text-greenish`}
               onClick={closeDrawer}
             >

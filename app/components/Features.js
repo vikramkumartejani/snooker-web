@@ -99,10 +99,6 @@ export default function Features() {
         <div
           id="features"
           className="py-[21px] md:py-[60px] lg:py-[84px] px-4 bg-light-gradient dark:bg-dark-gradient"
-          // style={{
-          //   background:
-          //     "radial-gradient(50% 50% at 50% 50%, rgba(240, 255, 247, 0) 0%, #F0FFF7 100%)",
-          // }}
         >
           <div className="max-w-[1280px] mx-auto">
             <div data-aos="fade-up" className="text-center mb-[58px]">
@@ -124,26 +120,26 @@ export default function Features() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 max-w-[1127px] mx-auto xl:gap-[46px] md:gap-8 gap-[24px] pb-[60px]">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  data-aos="fade-up"
-                  className="bg-white rounded-[20px] border px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
-                >
-                  <div className="min-w-[38px] min-h-[38px]">
-                    <Image
-                      src={feature.icon}
-                      alt="feature icon"
-                      width={38}
-                      height={38}
-                      className="w-[38px] h-[38px]"
-                    />
+                <div data-aos="fade-up" key={index} className="card-border overflow-hidden p-0.5">
+                  <div
+                    className="bg-white rounded-[20px] w-full h-full relative z-40 border px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
+                  >
+                    <div className="min-w-[38px] min-h-[38px]">
+                      <Image
+                        src={feature.icon}
+                        alt="feature icon"
+                        width={38}
+                        height={38}
+                        className="w-[38px] h-[38px]"
+                      />
+                    </div>
+                    <h3 className="text-[16px] md:text-[22px] font-[600] md:leading-[32px] text-blackish">
+                      {feature.title}
+                    </h3>
+                    <p className="text-grayish text-[14px] md:text-[16px] font-[400] leading-[25px]">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-[16px] md:text-[22px] font-[600] md:leading-[32px] text-blackish">
-                    {feature.title}
-                  </h3>
-                  <p className="text-grayish text-[14px] md:text-[16px] font-[400] leading-[25px]">
-                    {feature.description}
-                  </p>
                 </div>
               ))}
             </div>
