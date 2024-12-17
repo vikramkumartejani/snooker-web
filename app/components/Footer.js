@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="overflow-hidden bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
+    <footer id="footer" className="overflow-hidden bg-[#4DC488] dark:bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex items-start justify-between xl:gap-[60px] lg:gap-8 md:gap-[40px] gap-[32px] md:py-[67px] py-[32px]">
           {/* Company Info */}
@@ -103,10 +103,13 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t-[1px] border-white dark:border-greenish md:py-[30px] py-[24px]">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-[21px]">
-            <p className="text-white text-[12px] font-[500]">
-              Copyright 2023 abc. All rights reserved.
-            </p>
-            <p className="text-white text-[12px] font-medium">Designed by Auekeeper</p>
+            <div>
+
+              <p className="text-white text-[12px] font-[500]">
+                Copyright 2023 abc. All rights reserved.
+              </p>
+              <p className="text-white text-[12px] font-medium">Designed by Auekeeper</p>
+            </div>
             <nav className="flex gap-5 md:gap-[40px] flex-wrap justify-center">
               <a
                 href="/#home"

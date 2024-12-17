@@ -91,9 +91,6 @@ body {
   }
 }
 
-
-
-
 /* Animated border */
 .card-border {
   position: relative;
@@ -119,11 +116,11 @@ body {
   height: 130%;
   background: linear-gradient(
     0deg,
-    rgba(56, 220, 201, 0.762) 13.7%,
-    rgba(56, 220, 200, 0.4) 27.55%,
-    #02695d 36.4%,
-    #38dcc8 53.88%,
-    rgba(56, 220, 201, 0.345) 89.18%
+    #63d397ad 13.7%,
+    rgba(76, 224, 206, 0.556) 27.55%,
+    #23c4b189 36.4%,
+    #63d3978f 53.88%,
+    rgba(56, 220, 201, 0) 89.18%
   );
   z-index: -2;
   animation: border-wide 8s linear infinite;
@@ -151,4 +148,3 @@ body {
   inset: 2px;
   border-radius: 20px;
 }
-

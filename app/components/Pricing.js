@@ -19,6 +19,7 @@ export default function Pricing() {
         "Lorem Ipsum",
         "Lorem Ipsum",
       ],
+      isPopular: false,
     },
     {
       id: 2,
@@ -33,12 +34,13 @@ export default function Pricing() {
         "Lorem Ipsum",
         "Lorem Ipsum",
       ],
+      isPopular: false,
     },
     {
       id: 3,
-      name: "Basic Plan",
+      name: "Popular Plan",
       price: "20",
-      allow: "By Basic Plan",
+      allow: "By Popular Plan",
       features: [
         "Lorem Ipsum",
         "Lorem Ipsum",
@@ -47,12 +49,13 @@ export default function Pricing() {
         "Lorem Ipsum",
         "Lorem Ipsum",
       ],
+      isPopular: true,
     },
     {
       id: 4,
       name: "Basic Plan",
       price: "20",
-      allow: "By Basic Plan",
+      allow: "All feature from Basic Plan",
       features: [
         "Lorem Ipsum",
         "Lorem Ipsum",
@@ -61,6 +64,7 @@ export default function Pricing() {
         "Lorem Ipsum",
         "Lorem Ipsum",
       ],
+      isPopular: false,
     },
   ];
 
@@ -88,7 +92,6 @@ export default function Pricing() {
         className="absolute right-0 top-0 w-[13.3vw]"
       />
       <div className="max-w-[1300px] mx-auto w-full">
-
         <div data-aos="fade-up" className="text-center px-4 sm:px-6 lg:px-0">
           <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
             PRICING
@@ -117,6 +120,11 @@ export default function Pricing() {
                   boxShadow: "3.85px 5.78px 38.5px 0px #0000000D",
                 }}
               >
+                {plan.isPopular && (
+                  <div className="w-fit text-sm bg-greenish absolute text-white py-1 px-2 rounded-se-[20px] top-0 right-0 z-40">
+                    <h2>Popular</h2>
+                  </div>
+                )}
                 <h3 className="text-[22px] font-[500] text-center text-blackish mb-[11px]">
                   {plan.name}
                 </h3>
@@ -138,7 +146,7 @@ export default function Pricing() {
                     </p>
                   </div>
                 </div>
-                <p className="py-6 md:py-8 text-blackish text-center text-[16px] font-medium">
+                <p className="py-6 md:py-8 text-left text-blackish text-[16px] font-medium">
                   {plan.allow}
                 </p>
                 <div className="space-y-[11px] md:space-y-[16px] mb-[16px] md:mb-[18px]">

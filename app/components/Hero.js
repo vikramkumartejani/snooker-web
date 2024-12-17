@@ -116,8 +116,8 @@ export default function Hero() {
               <button
                 key={index}
                 className={`max-w-3 max-h-3 min-w-3 min-h-2 md:min-h-3 rounded-full transition-all duration-300 ${index === activeIndex
-                    ? "min-w-5 md:min-w-7 md:max-w-7 bg-white  lg:bg-greenish"
-                    : "bg-gray-300 dark:bg-gray-600"
+                  ? "min-w-5 md:min-w-7 md:max-w-7 bg-white  lg:bg-greenish"
+                  : "bg-gray-300 dark:bg-gray-600"
                   }`}
                 onClick={() => {
                   const swiper = document.querySelector('.swiper').swiper;

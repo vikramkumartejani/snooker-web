@@ -120,7 +120,7 @@ export default function Features() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 max-w-[1127px] mx-auto xl:gap-[46px] md:gap-8 gap-[24px] pb-[60px]">
               {features.map((feature, index) => (
-                <div data-aos="fade-up" key={index} className="card-border overflow-hidden p-0.5">
+                <div data-aos="fade-up" key={index} className=" overflow-hidden rounded-[20px]">
                   <div
                     className="bg-white rounded-[20px] w-full h-full relative z-40 border px-[20px] md:px-[24px] md:py-[26px] py-[20px] shadow-sm hover:shadow-md transition-shadow flex flex-col gap-[16px] md:gap-[20px]"
                   >

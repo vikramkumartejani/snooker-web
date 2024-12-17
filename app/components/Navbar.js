@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["#home", "#why-choose-us", "#features", "#pricing"];
+      const sections = ["#home", "#why-choose-us", "#features", "#pricing", "#footer"];
       let active = "#home";
 
       for (const id of sections) {
@@ -94,7 +94,7 @@ export default function Navbar() {
             {/* Navigation Links */}
             <div className="hidden lg:flex items-center xl:gap-[48px] gap-[35px]">
               <a
-                href="/#home"
+                href="#home"
                 className={`relative font-poppins font-[500] ${activeSection === "#home"
                   ? "text-greenish"
                   : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
@@ -133,7 +133,7 @@ export default function Navbar() {
                 ></div>
               </a>
               <a
-                href="/#pricing"
+                href="#pricing"
                 className={`relative font-poppins font-[500] ${activeSection === "#pricing"
                   ? "text-greenish"
                   : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
@@ -142,6 +142,20 @@ export default function Navbar() {
                 Pricing
                 <div
                   className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${activeSection === "#pricing" ? "" : "hidden"
+                    }`}
+                ></div>
+              </a>
+
+              <a
+                href="/#footer"
+                className={`relative font-poppins font-[500] ${activeSection === "#footer"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  } hover:text-greenish`}
+              >
+                Contact
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${activeSection === "#footer" ? "" : "hidden"
                     }`}
                 ></div>
               </a>
