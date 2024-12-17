@@ -196,7 +196,7 @@ export default function Navbar() {
         onClick={closeDrawer}
       >
         <div
-          className={`fixed top-0 right-0 bg-white w-64 h-full shadow-lg z-50 transform transition-transform duration-300 ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 bg-white w-2/3 sm:w-1/2 h-full shadow-lg z-50 transform transition-transform duration-300 ${isDrawerOpen ? "translate-x-0" : "translate-x-full"
             }`}
           onClick={(e) => e.stopPropagation()}
         >

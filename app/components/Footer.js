@@ -102,14 +102,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t-[1px] border-white dark:border-greenish md:py-[30px] py-[24px]">
-          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-[21px]">
-            <div className="flex items-center justify-center sm:flex-row flex-col gap-5 md:gap-2">
+          <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-[21px]">
+            <div className="flex items-center justify-center sm:flex-row flex-col gap-2 sm:gap-5 md:gap-2">
               <p className="text-white text-[12px] font-[500]">
                 Copyright 2023 abc. All rights reserved.
               </p>
               <p className="text-white text-[12px] font-medium">Designed by Auekeeper</p>
             </div>
-            <nav className="flex gap-5 md:gap-[40px] flex-wrap justify-center">
+            <nav className="flex gap-3 sm:gap-5 md:gap-[40px] flex-wrap justify-center">
               <a
                 href="/#home"
                 className="text-[12px] font-[500] hover:underline"
