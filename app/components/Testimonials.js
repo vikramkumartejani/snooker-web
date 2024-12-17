@@ -122,7 +122,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="testimonial-slider w-full !max-w-[1920px] mx-auto px-4">
+      <div className="testimonial-slider !w-full !max-w-[1920px] mx-auto px-4">
         {isClient ? (
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -152,8 +152,12 @@ export default function Testimonials() {
                 slidesPerView: 3.5,
                 spaceBetween: 30,
               },
-              1950: {
+              1440: {
                 slidesPerView: 4.5,
+                spaceBetween: 40,
+              },
+              1950: {
+                slidesPerView: 5,
                 spaceBetween: 40,
               },
             }}
