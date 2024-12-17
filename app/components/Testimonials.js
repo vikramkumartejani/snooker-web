@@ -152,9 +152,17 @@ export default function Testimonials() {
                 slidesPerView: 3.5,
                 spaceBetween: 30,
               },
-              1279: {
+              1440: {
                 slidesPerView: 4.5,
                 spaceBetween: 70,
+              },
+              1800: {
+                slidesPerView: 5,
+                spaceBetween: 60,
+              },
+              2000: {
+                slidesPerView: 7,
+                spaceBetween: 60,
               },
             }}
             className="pb-14"
