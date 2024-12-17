@@ -131,8 +131,8 @@ export default function Testimonials() {
             loop={true}
             observer={true}
             observeParents={true}
-            resizeObserver={true}
-            updateOnWindowResize={true}
+            resizeObserver={false}
+            updateOnWindowResize={false}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
