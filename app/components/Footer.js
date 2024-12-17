@@ -104,24 +104,36 @@ export default function Footer() {
               Copyright 2023 abc. All rights reserved.
             </p>
             <p className="text-white text-[12px] font-medium">Designed by Auekeeper</p>
-            <nav className="flex gap-5 md:gap-[40px]">
+            <nav className="flex gap-5 md:gap-[40px] flex-wrap justify-center">
               <a
                 href="/#home"
                 className="text-[12px] font-[500] hover:underline"
               >
-                Terms and Conditions
+                Shipping policy
+
               </a>
               <a
                 href="/#why-choose-us"
                 className="text-[12px] font-[500] hover:underline"
               >
-                Privacy Policy
+                Terms and conditions
+
               </a>
               <a
                 href="/#features"
                 className="text-[12px] font-[500] hover:underline"
               >
-                About Us
+                Privacy policy
+
+              </a>
+              <a
+                href="/#features"
+                className="text-[12px] font-[500] hover:underline"
+              >
+              Cancellation/Refund Policy
+
+
+
               </a>
 
             </nav>

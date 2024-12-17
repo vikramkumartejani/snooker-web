@@ -67,9 +67,42 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative"
+      className="overflow-hidden pt-[58px] md:pt-[116px] lg:px-8 bg-[#F0FFF7] relative"
     >
+      <img
+        src="/assets/pricing-15-ball-object.png"
+        alt="snooker ball 15"
+        data-aos="fade-right"
+        className="absolute left-0 top-0 lg:w-[11.7vw] w-[13.3vw]"
+      />
+      <img
+        src="/assets/pricing-1-ball-object.png"
+        alt="snooker ball 15"
+        data-aos="fade-left"
+        className="absolute md:right-[33px] right-[24.8px] top-0 lg:w-[9vw] w-[13.3vw]"
+      />
+      <img
+        src="/assets/pricing-stick-object.png"
+        alt="snooker ball 15"
+        data-aos="fade-up"
+        className="absolute right-0 top-0 w-[13.3vw]"
+      />
       <div className="max-w-[1300px] mx-auto w-full">
+
+        <div data-aos="fade-up" className="text-center px-4 sm:px-6 lg:px-0">
+          <span className="text-greenish text-[10px] md:text-[18px] font-[600] uppercase mb-[8px] block">
+            PRICING
+          </span>
+          <h2 className="text-[20px] md:text-[40px] md:leading-[45px] font-bold text-blackish mb-[12px]">
+            Awesome Pricing Plan
+          </h2>
+          <p className="text-grayish text-[12px] md:text-[16px] max-w-[700px] mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna incididunt ut
+            labore et
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[14px] md:gap-[24px] overflow-auto px-4 sm:px-6 lg:px-0 pt-[26.62px] md:pt-[60px] pb-[47px] md:pb-[66px]">
           {plans.map((plan) => (
             <div
@@ -127,8 +160,8 @@ export default function Pricing() {
                 </div>
                 <button
                   className={`w-full text-base py-[8px] md:py-[12px] px-6 rounded-[10.22px] md:rounded-[16px] border border-greenish text-[12px] md:text-[16px] font-[600] transition-all duration-300 group-hover:bg-greenish group-hover:text-white ${selectedPlan === plan.id
-                      ? "bg-greenish text-white"
-                      : "text-greenish"
+                    ? "bg-greenish text-white"
+                    : "text-greenish"
                     }`}
                 >
                   Purchase Now

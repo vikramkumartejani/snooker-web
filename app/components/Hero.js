@@ -38,6 +38,11 @@ export default function Hero() {
 
   return (
     <div id="home" className="overflow-hidden relative pt-16 dark:bg-black">
+      <img
+                  src="/assets/hero-object.png"
+                  alt="Snooker Table Illustration"
+                  className="object-contain absolute left-0 xl:left-[-80px] bottom-10 lg:bottom-20 dark:opacity-20"
+                />
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -95,11 +100,7 @@ export default function Hero() {
                     />
                   </div>
                 </div>
-                <img
-                  src="/assets/hero-object.png"
-                  alt="Snooker Table Illustration"
-                  className="object-contain absolute left-0 xl:left-[-80px] bottom-0 z-10 dark:opacity-20"
-                />
+                
               </div>
             </div>
           </SwiperSlide>
