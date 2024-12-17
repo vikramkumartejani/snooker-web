@@ -156,12 +156,12 @@ export default function Testimonials() {
                 slidesPerView: 4.5,
                 spaceBetween: 70,
               },
-              1800: {
+              1950: {
                 slidesPerView: 5,
                 spaceBetween: 60,
               },
               2000: {
-                slidesPerView: 7,
+                slidesPerView: 6.5,
                 spaceBetween: 60,
               },
             }}
