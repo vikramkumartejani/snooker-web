@@ -80,14 +80,13 @@ const testimonials = [
     rating: 4,
     logo: "/assets/continental-logo.png",
   },
-
 ];
 
 export default function Testimonials() {
-  const [swiperKey, setSwiperKey] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setSwiperKey((prevKey) => prevKey + 1);
+    setIsClient(true);
   }, []);
 
   const renderStars = (rating) => {
@@ -124,72 +123,79 @@ export default function Testimonials() {
       </div>
 
       <div className="testimonial-slider">
-        <Swiper
-        key={swiperKey}
-          modules={[Pagination, Autoplay]}
-          centeredSlides={true}
-          slidesPerView={1}
-          loop={true}
-          observer={true}  
-          observeParents={true} 
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-            bulletClass: "swiper-pagination-bullet swiper-pagination-custom",
-            bulletActiveClass:
-              "swiper-pagination-bullet-active swiper-pagination-custom-active",
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3.5,
-              spaceBetween: 30,
-            },
-            1279: {
-              slidesPerView: 4.5,
-              spaceBetween: 70,
-            },
-          }}
-          className="pb-14"
-        >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className="sm:px-2 md:px-0 px-4 w-full">
-              <div className="bg-white dark:bg-greenish rounded-[12px] !w-full !min-w-full !max-w-full min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
-                <div className="h-[26.1px] mb-[18.35px]">
-                  <Image
-                    src={testimonial.logo}
-                    alt="Continental Logo"
-                    width={120}
-                    height={32}
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-[12px] md:text-[15px] text-[#2E2E2EE5] dark:text-gray-200 mb-[18px] sm:min-h-[70px] min-h-[50px]">
-                  {testimonial.text}
-                </p>
-                <div className="flex gap-[2px] mb-[16px]">
-                  {renderStars(testimonial.rating)}
-                </div>
-                <div>
-                  <h4 className="text-[15px] font-[500] text-[#2E2E2EE5] dark:text-gray-200">
-                    {testimonial.author}
-                  </h4>
-                  <p className="text-[13px] text-[#2E2E2EB2] dark:text-white pt-[2px]">
-                    {testimonial.position}
+        {isClient ? (
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            centeredSlides={true}
+            slidesPerView={1}
+            loop={true}
+            observer={true}
+            observeParents={true}
+            resizeObserver={true}
+            updateOnWindowResize={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              bulletClass: "swiper-pagination-bullet swiper-pagination-custom",
+              bulletActiveClass:
+                "swiper-pagination-bullet-active swiper-pagination-custom-active",
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3.5,
+                spaceBetween: 30,
+              },
+              1279: {
+                slidesPerView: 4.5,
+                spaceBetween: 70,
+              },
+            }}
+            className="pb-14"
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id} className="sm:px-2 md:px-0 px-4 w-full">
+                <div className="bg-white dark:bg-greenish rounded-[12px] !w-full !min-w-full !max-w-full min-h-[300px] max-h-[300px] h-[300px] p-6 transition-all duration-300 testimonial-card flex flex-col items-center justify-center text-center">
+                  <div className="h-[26.1px] mb-[18.35px]">
+                    <Image
+                      src={testimonial.logo}
+                      alt="Continental Logo"
+                      width={120}
+                      height={32}
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[12px] md:text-[15px] text-[#2E2E2EE5] dark:text-gray-200 mb-[18px] sm:min-h-[70px] min-h-[50px]">
+                    {testimonial.text}
                   </p>
+                  <div className="flex gap-[2px] mb-[16px]">
+                    {renderStars(testimonial.rating)}
+                  </div>
+                  <div>
+                    <h4 className="text-[15px] font-[500] text-[#2E2E2EE5] dark:text-gray-200">
+                      {testimonial.author}
+                    </h4>
+                    <p className="text-[13px] text-[#2E2E2EB2] dark:text-white pt-[2px]">
+                      {testimonial.position}
+                    </p>
+                  </div>
                 </div>
-              </div>
-
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="flex justify-center items-center min-h-[300px]">
+            <div className="animate-pulse text-lg">Loading testimonials...</div>
+          </div>
+        )}
       </div>
     </section>
   );
 }
+
