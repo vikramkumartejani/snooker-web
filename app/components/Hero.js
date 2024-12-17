@@ -39,10 +39,10 @@ export default function Hero() {
   return (
     <div id="home" className="overflow-hidden relative pt-16 dark:bg-black">
       <img
-                  src="/assets/hero-object.png"
-                  alt="Snooker Table Illustration"
-                  className="object-contain absolute left-0 xl:left-[-80px] bottom-10 lg:bottom-20 dark:opacity-20"
-                />
+        src="/assets/hero-object.png"
+        alt="Snooker Table Illustration"
+        className="object-contain absolute left-0 xl:left-[-80px] bottom-10 lg:bottom-9 dark:opacity-20"
+      />
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -100,7 +100,7 @@ export default function Hero() {
                     />
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </SwiperSlide>
@@ -110,11 +110,10 @@ export default function Hero() {
             {slides.map((_, index) => (
               <button
                 key={index}
-                className={`max-w-3 max-h-3 min-w-3 min-h-2 md:min-h-3 rounded-full transition-all duration-300 ${
-                  index === activeIndex
+                className={`max-w-3 max-h-3 min-w-3 min-h-2 md:min-h-3 rounded-full transition-all duration-300 ${index === activeIndex
                     ? "min-w-5 md:min-w-7 md:max-w-7 bg-white  lg:bg-greenish"
                     : "bg-gray-300 dark:bg-gray-600"
-                }`}
+                  }`}
                 onClick={() => {
                   const swiper = document.querySelector('.swiper').swiper;
                   swiper.slideTo(index);
