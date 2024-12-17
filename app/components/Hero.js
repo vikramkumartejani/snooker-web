@@ -43,6 +43,11 @@ export default function Hero() {
         alt="Snooker Table Illustration"
         className="object-contain absolute left-0 xl:left-[-80px] bottom-10 lg:bottom-9 dark:opacity-20"
       />
+      <img
+        src="/assets/hero-section-top-line.svg"
+        alt="Snooker Table Illustration"
+        className="object-contain absolute right-0 top-0 dark:opacity-20"
+      />
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
