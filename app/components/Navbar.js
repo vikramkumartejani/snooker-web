@@ -261,17 +261,36 @@ export default function Navbar() {
                   }`}
               ></div>
             </a>
-            <Link
-              href="/checkout"
-              className="text-center w-full text-[#2E2E2EB2] font-poppins font-[500] hover:bg-grayish/10 py-2 px-4 border border-[#2E2E2EB2] rounded-md"
-              onClick={closeDrawer}
-            >
-              Cart
-            </Link>
+            <a
+                href="/#footer"
+                className={`relative font-poppins font-[500] ${activeSection === "#footer"
+                  ? "text-greenish"
+                  : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
+                  } hover:text-greenish`}
+              >
+                Contact
+                <div
+                  className={`absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-[20px] h-[4px] bg-greenish rounded-[20px] ${activeSection === "#footer" ? "" : "hidden"
+                    }`}
+                ></div>
+              </a>
+              <div className="relative w-full">
+                <Link
+                  href="/checkout"
+                  className="flex items-center justify-center text-[#2E2E2EB2] dark:text-white font-poppins font-[500] hover:bg-grayish/10 transition border border-[#2E2E2EB2] dark:border-white rounded-[12px] py-[8px] px-[16px] w-full"
+                >
+                  <IoCartOutline className="h-[24px] w-[24px]" />
+                  <span className="ml-[6px]">Cart</span>
+                </Link>
+                <div className="w-5 h-5 bg-greenish absolute -top-1 rounded-md -right-2 flex items-center justify-center">
+                  <h3 className="text-white text-sm">{cartCount}</h3>
+                </div>
+              </div>
             <button
-              className="text-center w-full text-greenish font-poppins font-[500] hover:bg-greenish/20 py-2 px-4 border border-greenish rounded-md"
+              className="text-center w-full flex items-center gap-2 justify-center text-greenish font-poppins font-[500] hover:bg-greenish/20 py-2 px-4 border border-greenish rounded-md"
               onClick={closeDrawer}
             >
+               <IoLogoWhatsapp className="h-[20px] w-[20px]" />
               Contact Us
             </button>
             <button
