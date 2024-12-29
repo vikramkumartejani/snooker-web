@@ -37,17 +37,17 @@ export default function Checkout() {
   ];
 
   return (
-    <main className="overflow-hidden min-h-screen bg-white dark:bg-black pt-[110px] px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[110px]">
+    <main className="overflow-hidden min-h-screen bg-white dark:bg-black pt-[60px] px-4 sm:px-6 lg:px-8 pb-[60px] md:pb-[110px]">
       <section className="max-w-[1200px] mx-auto">
-        <h1 data-aos="fade-right" className="lg:pt-[35px] pb-[32px] md:pb-[50px] lg:pb-[70px] text-[24px] md:text-[40px] lg:text-[50px] text-blackish dark:text-white font-[700]">
+        <h1 data-aos="fade-right" className="lg:pt-[35px] pb-[32px] md:pb-[30px] lg:pb-[20px] text-[24px] md:text-[40px] lg:text-[40px] text-blackish dark:text-white font-[700]">
           Checkout
         </h1>
-        <div className="flex lg:flex-row flex-col xl:gap-[50px] md:gap-4 gap-[50px]">
+        <div className="w-full flex items-start lg:flex-row flex-col xl:gap-[50px] md:gap-4 gap-[50px]">
           {/* Left Column */}
-          <div className="flex-grow flex-shrink space-y-[24px] overflow-x-auto">
+          <div className="w-full flex-grow flex-shrink space-y-[16px] overflow-x-auto">
             {/* Automation Section */}
             <div data-aos="fade-up">
-              <h2 className="text-[18px] md:text-[30px] dark:text-white/90 font-[500] md:font-[600] mb-[12px] md:mb-[24px]">
+              <h2 className="text-[18px] md:text-[30px] dark:text-white/90 font-[500] md:font-[600] mb-[12px] md:mb-[16px]">
                 Automation
               </h2>
               <div className="flex gap-[16px] md:gap-[24px] overflow-x-auto flex-grow flex-shrink md:pb-[24px] pb-[30px]">
@@ -79,95 +79,84 @@ export default function Checkout() {
 
             {/* Store Information */}
             <div>
-              <h2 data-aos="fade-right" className="md:block hidden text-[18px] md:text-[30px] dark:text-white  font-[500] md:font-[600] mb-[12px] md:mb-[24px]">
+              <h2 data-aos="fade-right" className="md:block hidden text-[18px] md:text-[30px] dark:text-white  font-[500] md:font-[600] mb-[12px] md:mb-[16px]">
                 Store Information
               </h2>
-              <form data-aos="fade-right" className="overflow-hidden md:space-y-[20px] space-y-[16px]">
-                <input
-                  type="text"
-                  name="storeName"
-                  placeholder="Store Name"
-                  value={formData.storeName}
-                  onChange={handleInputChange}
-                  className="w-full rounded-[16px]  outline-none border dark:bg-transparent dark:border-white dark:text-white border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                />
-
-                <div className="grid md:grid-cols-2 xl:gap-[35px] md:gap-[24px] gap-[10px]">
-                  <input
-                    type="tel"
-                    name="mobileNumber"
-                    placeholder="Mobile Number"
-                    value={formData.mobileNumber}
-                    onChange={handleInputChange}
-                    className="w-full rounded-[16px] outline-none dark:bg-transparent dark:border-white dark:text-white border border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full rounded-[16px] outline-none dark:bg-transparent dark:border-white dark:text-white border border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                  />
+              <form data-aos="fade-right" className="overflow-hidden md:space-y-[10px] space-y-[8px]">
+                <div className="input-wrapper">
+                  <input type='text' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                  <label htmlFor='input' className='placeholder'>
+                    Store Name
+                  </label>
                 </div>
 
-                <input
-                  type="text"
-                  name="customerName"
-                  placeholder="Customer Name"
-                  value={formData.customerName}
-                  onChange={handleInputChange}
-                  className="w-full rounded-[16px] outline-none dark:bg-transparent dark:border-white dark:text-white border border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                />
-
-                <input
-                  type="text"
-                  name="address"
-                  placeholder="Address"
-                  value={formData.address}
-                  onChange={handleInputChange}
-                  className="w-full rounded-[16px] outline-none dark:bg-transparent dark:border-white dark:text-white border border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                />
-
                 <div className="grid md:grid-cols-2 xl:gap-[35px] md:gap-[24px] gap-[10px]">
-                  <div className="relative w-full">
+                  <div className="input-wrapper w-full">
+                    <input type='number' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                    <label htmlFor='input' className='placeholder'>
+                      Mobile Number
+                    </label>
+                  </div>
+
+                  <div className="input-wrapper w-full">
+                    <input type='email' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                    <label htmlFor='input' className='placeholder'>
+                      Email
+                    </label>
+                  </div>
+                </div>
+
+                <div className="input-wrapper w-full">
+                  <input type='text' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                  <label htmlFor='input' className='placeholder'>
+                    Customer Name
+                  </label>
+                </div>
+
+                <div className="input-wrapper w-full">
+                  <input type='text' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                  <label htmlFor='input' className='placeholder'>
+                    Address
+                  </label>
+                </div>
+
+
+                <div className="grid md:grid-cols-2 xl:gap-[30px] md:gap-[24px] gap-[10px]">
+                  <div className="relative w-full mt-3">
                     <select
                       name="country"
                       value={formData.country}
                       onChange={handleInputChange}
-                      className={`w-full appearance-none outline-none dark:bg-transparent dark:text-white rounded-[16px] border border-[#9A9EA6] dark:border-white font-[400] ${
-                        formData.country === "" &&
+                      className={`w-full appearance-none outline-none dark:bg-white dark:text-black rounded-[16px] border border-[#9A9EA6] dark:border-white font-[400] ${formData.country === "" &&
                         "text-grayish md:text-[16px] text-[14px]"
-                      } placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px] pr-[40px]`}
+                        } placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[16px] py-[16px] pr-[40px]`}
                     >
                       <option value="" className=" dark:text-black">Country</option>
                       <option value="US" className=" dark:text-black">United States</option>
                       <option value="UK" className=" dark:text-black">United Kingdom</option>
                       <option value="CA" className=" dark:text-black">Canada</option>
                     </select>
-                    <span className="absolute inset-y-0 right-[20px] flex items-center pointer-events-none">
+                    <span className="absolute top-5 right-[20px] flex items-center pointer-events-none">
                       <IoMdArrowDropdown className="text-grayish" />
                     </span>
                   </div>
 
-                  <input
-                    type="text"
-                    name="pinCode"
-                    placeholder="Pin Code"
-                    value={formData.pinCode}
-                    onChange={handleInputChange}
-                    className="w-full rounded-[16px] outline-none dark:bg-transparent dark:text-white border dark:border-white border-[#9A9EA6] font-[400] placeholder:text-[14px] md:placeholder:text-[16px] px-[20px] md:py-[20px] py-[16px]"
-                  />
+                  <div className="input-wrapper w-full">
+                    <input type='number' id='input' required className="w-full relative z-30 bg-transparent"></input>
+                    <label htmlFor='input' className='placeholder'>
+                      Pin Code
+                    </label>
+                  </div>
                 </div>
               </form>
             </div>
           </div>
 
           {/* Right Column - Order Overview */}
-          <div data-aos="fade-left" className="lg:max-w-[467px] lg:min-w-[380px] md:border border-[#EEEEEE] rounded-[20px] md:shadow-lg md:px-[30px] md:py-[34px]">
-            <h2 className="text-[28px] font-[400] mb-[30px] dark:text-white">Order Overview</h2>
+          <div data-aos="fade-left" className="lg:max-w-[467px] lg:min-w-[380px] md:border border-[#EEEEEE] rounded-[20px] md:shadow-lg md:px-[30px] md:py-[30px]">
+            <h2 className="text-[28px] font-[400] mb-[24px] dark:text-white">Order Overview</h2>
 
-            <div className="mb-[48px] flex items-center gap-[15px] relative">
+            <div className="mb-[40px] flex items-center gap-[15px] relative">
               <div className="flex items-start">
                 <span className="text-[22px] leading-[32.95px] text-[#2E2E2EE5] dark:text-white font-[500] mt-1">
                   $
@@ -191,12 +180,12 @@ export default function Checkout() {
               />
             </div>
 
-            <button className="w-full py-[16px] px-6 rounded-[16px] border border-greenish text-greenish hover:bg-green-50 text-[16px] md:text-[20px] md:leading-[24.2px] mb-[32px] transition">
+            <button className="w-full py-[12px] px-6 rounded-[16px] border border-greenish text-greenish hover:bg-green-50 text-[16px] md:text-[20px] md:leading-[24.2px] mb-[32px] transition">
               Change Basic Plan
             </button>
 
-            <div className="space-y-[16px] md:space-y-[32px]">
-              <div className="space-y-[30px] pb-[16px] md:pb-[20px] border-b border-[#E2E2E2]">
+            <div className="space-y-[16px] md:space-y-[24px]">
+              <div className="space-y-[20px] pb-[16px] md:pb-[20px] border-b border-[#E2E2E2]">
                 <h3 className="text-[18px] md:text-[22px] font-[500] md:font-[600] text-blackish dark:text-white">
                   Payment Details
                 </h3>

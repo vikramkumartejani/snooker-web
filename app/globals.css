@@ -148,3 +148,43 @@ body {
   inset: 2px;
   border-radius: 20px;
 }
+
+
+
+/* Input */
+.input-wrapper {
+  --padding: 16px;
+  --focus-color: black;
+  position: relative;
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+}
+
+input {
+  padding: var(--padding);
+  border: 1px solid #9A9EA6;
+  outline: none;
+  border-radius: 10px;
+}
+.placeholder {
+  border-radius: 10px;
+  position: absolute;
+  background-color: white;
+  color: gray;
+  left: var(--padding);
+  padding: 0 4px;
+  transition: all 0.2s ease-in;
+}
+
+input:is(:focus, :valid) {
+  border: 1px solid #9A9EA6;
+}
+
+input:is(:focus, :valid) + .placeholder {
+  position: absolute;
+  z-index: 50 !important;
+  transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
+  font-size: 14px;
+  color: var(--focus-color);
+}

@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
+  const [activeTab, setActiveTab] = useState('yearly')
 
   const plans = [
     {
@@ -106,7 +107,32 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[14px] md:gap-[24px] overflow-auto px-4 sm:px-6 lg:px-0 pt-[26.62px] md:pt-[60px] pb-[47px] md:pb-[66px]">
+        <div className="mt-8 w-full flex items-center justify-center">
+          <div className="inline-flex p-1 bg-gray-100 rounded-full ">
+            <button
+              onClick={() => setActiveTab('yearly')}
+              className={`${activeTab === 'yearly'
+                ? 'bg-white shadow-sm'
+                : 'text-gray-500 hover:text-gray-700'
+                } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
+              aria-pressed={activeTab === 'yearly'}
+            >
+              Yearly billing
+            </button>
+            <button
+              onClick={() => setActiveTab('monthly')}
+              className={`${activeTab === 'monthly'
+                ? 'bg-white shadow-sm'
+                : 'text-gray-500 hover:text-gray-700'
+                } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
+              aria-pressed={activeTab === 'monthly'}
+            >
+              Monthly billing
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[14px] md:gap-[24px] overflow-auto px-4 sm:px-6 lg:px-0 pt-[26.62px] md:pt-[40px] pb-[47px] md:pb-[66px]">
           {plans.map((plan) => (
             <div
               key={plan.id}

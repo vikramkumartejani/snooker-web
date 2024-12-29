@@ -133,7 +133,7 @@ export default function Navbar() {
                 ></div>
               </a>
               <a
-                href="#pricing"
+                href="/#pricing"
                 className={`relative font-poppins font-[500] ${activeSection === "#pricing"
                   ? "text-greenish"
                   : "text-[#2E2E2EB2] dark:text-white dark:hover:text-greenish"
