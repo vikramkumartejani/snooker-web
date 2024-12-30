@@ -148,25 +148,23 @@ body {
   inset: 2px;
   border-radius: 20px;
 }
-
-
-
 /* Input */
 .input-wrapper {
-  --padding: 16px;
+  --padding: 14px;
   --focus-color: black;
   position: relative;
   display: flex;
-  padding-top: 10px;
+  padding-top: 5px;
   align-items: center;
 }
 
-input {
+input, select {
   padding: var(--padding);
   border: 1px solid #9A9EA6;
   outline: none;
   border-radius: 10px;
 }
+
 .placeholder {
   border-radius: 10px;
   position: absolute;
@@ -174,17 +172,65 @@ input {
   color: gray;
   left: var(--padding);
   padding: 0 4px;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
 }
 
-input:is(:focus, :valid) {
+input:is(:focus, :valid), select:focus {
   border: 1px solid #9A9EA6;
 }
 
-input:is(:focus, :valid) + .placeholder {
+/* Move label when input or select is focused */
+input:is(:focus, :valid) + .placeholder,
+select:focus + .placeholder {
   position: absolute;
   z-index: 50 !important;
-  transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
+  transform: translateY(-26px);  /* Move label up */
   font-size: 14px;
   color: var(--focus-color);
+}
+
+/* Select wrapper */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+select {
+  padding: var(--padding);
+  border-radius: 10px;
+  border: 1px solid #9A9EA6;
+  outline: none;
+  appearance: none;
+  transition: border 0.2s ease-in;
+}
+
+select:focus {
+  border-color: var(--focus-color);
+}
+
+/* Move label for select on focus */
+.select-wrapper .placeholder {
+  position: absolute;
+  top: 5px;
+  left: 14px;
+  color: gray;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+select:focus + .placeholder {
+  transform: translateY(-25px); /* Moves the label when focused */
+  font-size: 14px;
+  color: var(--focus-color);
+}
+
+/* Dropdown arrow */
+.select-wrapper .icon {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }

@@ -4,13 +4,14 @@ import { useState } from "react";
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(1);
-  const [activeTab, setActiveTab] = useState('yearly')
+  const [activeTab, setActiveTab] = useState("monthly");
 
   const plans = [
     {
       id: 1,
       name: "Basic Plan",
-      price: "20",
+      monthlyPrice: "25",
+      yearlyPrice: "20",
       allow: "By Basic Plan",
       features: [
         "Lorem Ipsum",
@@ -24,9 +25,10 @@ export default function Pricing() {
     },
     {
       id: 2,
-      name: "Basic Plan",
-      price: "20",
-      allow: "By Basic Plan",
+      name: "Standard Plan",
+      monthlyPrice: "35",
+      yearlyPrice: "30",
+      allow: "By Standard Plan",
       features: [
         "Lorem Ipsum",
         "Lorem Ipsum",
@@ -40,7 +42,8 @@ export default function Pricing() {
     {
       id: 3,
       name: "Popular Plan",
-      price: "20",
+      monthlyPrice: "45",
+      yearlyPrice: "40",
       allow: "By Popular Plan",
       features: [
         "Lorem Ipsum",
@@ -54,9 +57,10 @@ export default function Pricing() {
     },
     {
       id: 4,
-      name: "Basic Plan",
-      price: "20",
-      allow: "All feature from Basic Plan",
+      name: "Premium Plan",
+      monthlyPrice: "60",
+      yearlyPrice: "50",
+      allow: "All feature from Premium Plan",
       features: [
         "Lorem Ipsum",
         "Lorem Ipsum",
@@ -110,24 +114,26 @@ export default function Pricing() {
         <div className="mt-8 w-full flex items-center justify-center">
           <div className="inline-flex p-1 bg-gray-100 rounded-full ">
             <button
-              onClick={() => setActiveTab('yearly')}
-              className={`${activeTab === 'yearly'
-                ? 'bg-white shadow-sm'
-                : 'text-gray-500 hover:text-gray-700'
-                } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
-              aria-pressed={activeTab === 'yearly'}
-            >
-              Yearly billing
-            </button>
-            <button
-              onClick={() => setActiveTab('monthly')}
-              className={`${activeTab === 'monthly'
-                ? 'bg-white shadow-sm'
-                : 'text-gray-500 hover:text-gray-700'
-                } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
-              aria-pressed={activeTab === 'monthly'}
+              onClick={() => setActiveTab("monthly")}
+              className={`${
+                activeTab === "monthly"
+                  ? "bg-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
+              aria-pressed={activeTab === "monthly"}
             >
               Monthly billing
+            </button>
+            <button
+              onClick={() => setActiveTab("yearly")}
+              className={`${
+                activeTab === "yearly"
+                  ? "bg-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              } px-4 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-200`}
+              aria-pressed={activeTab === "yearly"}
+            >
+              Yearly billing
             </button>
           </div>
         </div>
@@ -137,8 +143,9 @@ export default function Pricing() {
             <div
               key={plan.id}
               onClick={() => setSelectedPlan(plan.id)}
-              className={`p-0.5 cursor-pointer overflow-hidden lg:!w-fit ${selectedPlan === plan.id ? "card-border" : " rounded-[20px]"
-                }`}
+              className={`p-0.5 cursor-pointer overflow-hidden lg:!w-fit ${
+                selectedPlan === plan.id ? "card-border" : " rounded-[20px]"
+              }`}
             >
               <div
                 className="relative z-10 w-full lg:w-auto xl:min-w-[300px] min-w-full lg:min-w-[280px] bg-white rounded-[16px] md:rounded-[20px] px-[17px] md:px-[24px] md:pb-[30px] pb-[29px] pt-[16px] md:pt-[19px] transition-all duration-300 group"
@@ -160,15 +167,18 @@ export default function Pricing() {
                       $
                     </span>
                     <span className="text-[35px] lg:text-[42px] text-blackish font-bold md:leading-[42.2px]">
-                      {plan.price}
+                      {activeTab === "yearly"
+                        ? plan.yearlyPrice
+                        : plan.monthlyPrice}
                     </span>
                   </div>
                   <div>
                     <p className="text-blackish text-[14px] font-[500]">
-                      Per month
+                      Per {activeTab === "yearly" ? "year" : "month"}
                     </p>
                     <p className="text-grayish text-[11px] font-[400]">
-                      10% off for yearly subscription
+                      10% off for {activeTab === "yearly" ? "yearly" : "monthly"}{" "}
+                      subscription
                     </p>
                   </div>
                 </div>
@@ -193,10 +203,11 @@ export default function Pricing() {
                   ))}
                 </div>
                 <button
-                  className={`w-full text-base py-[8px] md:py-[12px] px-6 rounded-[10.22px] md:rounded-[16px] border border-greenish text-[12px] md:text-[16px] font-[600] transition-all duration-300 group-hover:bg-greenish group-hover:text-white ${selectedPlan === plan.id
-                    ? "bg-greenish text-white"
-                    : "text-greenish"
-                    }`}
+                  className={`w-full text-base py-[8px] md:py-[12px] px-6 rounded-[10.22px] md:rounded-[16px] border border-greenish text-[12px] md:text-[16px] font-[600] transition-all duration-300 group-hover:bg-greenish group-hover:text-white ${
+                    selectedPlan === plan.id
+                      ? "bg-greenish text-white"
+                      : "text-greenish"
+                  }`}
                 >
                   Purchase Now
                 </button>
