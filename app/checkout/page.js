@@ -65,21 +65,20 @@ export default function Checkout() {
               <h2 className="text-[18px] md:text-[24px] dark:text-white/90 font-[500] md:font-[600] mb-[12px] md:mb-[10px]">
                 Automation
               </h2>
-              <div className="flex gap-[16px] md:gap-[24px] overflow-x-auto flex-grow flex-shrink pb-[20px]">
+              <div className="flex gap-[16px] md:gap-[24px] overflow-x-auto pb-4">
                 {devices.map((device) => (
                   <div
                     key={device.id}
-                    className="bg-white rounded-[12px] overflow-hidden md:min-w-[290px] min-w-[240px] md:w-[290px] w-[240px]"
-                    style={{ boxShadow: "2px 8px 24px 0px #0000000F" }}
+                    className="bg-white border shadow-lg rounded-[12px] gap-3 flex overflow-hidden items-center min-w-[240px]"
                   >
-                    <div className="relative h-[150px] w-full">
+                    <div className="relative w-full flex-1 h-full">
                       <img
                         src={device.image}
                         alt={device.name}
-                        className="object-cover h-full w-full"
+                        className="object-cover min-h-full w-full"
                       />
                     </div>
-                    <div className="px-[13.24px] md:px-[16px] py-3 text-center">
+                    <div className="w-full flex-1  text-left">
                       <h3 className="text-[14px] md:text-[16px] font-[400] md:font-[600] text-blackish">
                         {device.name}
                       </h3>
@@ -243,14 +242,12 @@ export default function Checkout() {
                       Device Name | Device Name
                     </span>
                   </div>
-                  <div className="flex justify-between gap-1 text-[16px]">
-                    <span className="text-[#999999] font-[500] dark:text-white">
-                      Referral Code
-                    </span>
-                    <span className="font-[600] text-blackish dark:text-white/80">239d</span>
+                  <div className="flex justify-between gap-1 text-[16px] bg-white relative">
+                    <input type="text" placeholder="Referral Code" className="w-full shadow-inner text-[#999999] font-[500] p-3 dark:text-white bg-transparent border-0 outline-none h-full" />
+                    <button className="font-[600] text-blackish dark:text-white/80 absolute top-2.5 right-4 z-30 bg-white">Apply</button>
                   </div>
                 </div>
-              </div>
+              </div> 
 
               <div className="">
                 <div className="flex justify-between items-center gap-1 mb-[20px] md:text-[20px] text-[18px]">
